@@ -41,7 +41,7 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("one_hot_encoder", OneHotEncoder(drop='first', sparse_output=False)),
+                    ("one_hot_encoder", OneHotEncoder(handle_unknown='ignore', sparse_output=False)),
                     ("scaler", StandardScaler(with_mean=False))
                 ]
             )
@@ -71,7 +71,7 @@ class DataTransformation:
 
             preprocessing_obj = self.get_data_transformer_object()
 
-            target_column_name = self._schema_config.get("TARGET_COLUMN", {}).get("name", "price")
+            target_column_name = self._schema_config.get("target_column")
 
             # 1. Extract Target Features FIRST
             target_feature_train_df = train_df[target_column_name]
