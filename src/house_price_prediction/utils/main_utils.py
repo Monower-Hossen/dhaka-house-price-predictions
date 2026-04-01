@@ -10,12 +10,13 @@ from sklearn.model_selection import GridSearchCV
 
 from src.house_price_prediction.exception import CustomException
 from src.house_price_prediction.logger import logging
+from src.house_price_prediction.constants import DB_HOST, DB_USER, DB_PASSWORD, DB_NAME
 
 # Database Credentials - fetching from environment or using defaults
-host = os.getenv("host", "localhost")
-user = os.getenv("user", "root")
-password = os.getenv("password", "admin123")
-db = os.getenv('db', "house_price")
+host = os.getenv("host", DB_HOST)
+user = os.getenv("user", DB_USER)
+password = os.getenv("password", DB_PASSWORD)
+db = os.getenv('db', DB_NAME)
 
 def read_yaml_file(file_path: str) -> dict:
     try:
@@ -46,7 +47,7 @@ def read_sql_data():
         engine = create_engine(connection_string)
         
         logging.info(f"Connection Established via SQLAlchemy: {host}/{db}")
-        df = pd.read_sql_query('SELECT * FROM house_price', engine)
+        df = pd.read_sql_query(f'SELECT * FROM {db}', engine)
         logging.info(f"Data successfully read from SQL. Shape: {df.shape}")
         return df
     except Exception as e:
