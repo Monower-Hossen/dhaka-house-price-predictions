@@ -1,6 +1,7 @@
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from src.house_price_prediction.constants import FILE_NAME
 
 @dataclass
 class DataIngestionConfig:
@@ -9,7 +10,7 @@ class DataIngestionConfig:
     feature_store_file_path: Path = Path("artifacts/data_ingestion/data.csv")
     training_file_path: Path = Path("artifacts/data_ingestion/train.csv")
     testing_file_path: Path = Path("artifacts/data_ingestion/test.csv")
-    source_data_path: str = "notebook/data/house_price.csv"
+    source_data_path: str = os.path.join("notebook", "data", FILE_NAME)
 
 @dataclass
 class DataTransformationConfig:
@@ -31,22 +32,26 @@ class ModelTrainerConfig:
     root_dir: Path = Path("artifacts/model_trainer")
     trained_model_file_path: Path = Path("artifacts/model_trainer/model.pkl")
     expected_accuracy: float = 0.6
-
-# Schema Configuration
+    
+    
+    
+    """
+    # Schema Configuration
+    
 SCHEMA = {
     "columns": {
-        "area": "int64",
-        "bedrooms": "int64",
-        "bathrooms": "int64",
-        "stories": "int64",
-        "mainroad": "object",
-        "guestroom": "object",
-        "basement": "object",
-        "hotwaterheating": "object",
-        "airconditioning": "object",
-        "parking": "int64",
-        "prefarea": "object",
-        "furnishingstatus": "object"
+        "Location": "object",
+        "Type": "object",
+        "No_Beds": "int64",
+        "No_Baths": "int64",
+        "Area": "float64",
+        "Latitude": "float64",
+        "Longitude": "float64",
+        "Region": "object",
+        "Sub_region": "object",
+        "Price": "float64"
     },
-    "target_column": {"name": "price"}
+    "target_column": "Price"
 }
+
+    """
