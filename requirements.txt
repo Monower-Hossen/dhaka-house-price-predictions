@@ -1,0 +1,37 @@
+# Data Manipulation & Math
+pandas
+numpy<2.0.0
+scipy
+
+# Machine Learning Frameworks
+scikit-learn
+xgboost
+catboost
+lightgbm
+
+# Web Framework & Deployment
+flask
+gunicorn
+uvicorn
+fastapi
+
+# Utility & Serialization
+dill
+python-dotenv
+pydantic<2.0.0
+pyyaml
+typing-extensions
+
+# Visualization (for Notebooks/EDA)
+matplotlib
+seaborn
+
+# Editable local installation (Triggers setup.py)
+-e .
+
+# Monitoring & Data Drift
+evidently==0.2.8
+
+# database
+pymysql
+SQLAlchemy

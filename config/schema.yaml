@@ -1,0 +1,34 @@
+COLUMNS:
+  price: int64
+  area: int64
+  bedrooms: int64
+  bathrooms: int64
+  stories: int64
+  mainroad: object
+  guestroom: object
+  basement: object
+  hotwaterheating: object
+  airconditioning: object
+  parking: int64
+  prefarea: object
+  furnishingstatus: object
+
+TARGET_COLUMN:
+  name: price
+
+# Used by Data Transformation to apply specific scaling/encoding
+NUMERICAL_COLUMNS:
+  - area
+  - bedrooms
+  - bathrooms
+  - stories
+  - parking
+
+CATEGORICAL_COLUMNS:
+  - mainroad
+  - guestroom
+  - basement
+  - hotwaterheating
+  - airconditioning
+  - prefarea
+  - furnishingstatus
