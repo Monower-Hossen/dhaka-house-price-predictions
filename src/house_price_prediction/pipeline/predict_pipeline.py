@@ -1,9 +1,9 @@
 import sys
 import pandas as pd
+import os
 from src.house_price_prediction.exception import CustomException
 from src.house_price_prediction.utils.main_utils import load_object
 from src.house_price_prediction.config.config import ModelTrainerConfig, DataTransformationConfig
-import os
 
 class PredictPipeline:
     def __init__(self):
@@ -15,7 +15,7 @@ class PredictPipeline:
             model_path = self.model_config.trained_model_file_path
             preprocessor_path = self.transformation_config.preprocessor_obj_file_path
 
-            # Load objects using the utility function we created
+            # Load objects using the utility function
             model = load_object(file_path=model_path)
             preprocessor = load_object(file_path=preprocessor_path)
 
@@ -29,49 +29,43 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(self, 
-                 area: int,
-                 bedrooms: int,
-                 bathrooms: int,
-                 stories: int,
-                 mainroad: str,
-                 guestroom: str,
-                 basement: str,
-                 hotwaterheating: str,
-                 airconditioning: str,
-                 parking: int,
-                 prefarea: str,
-                 furnishingstatus: str):
+                 Location: str,
+                 Type: str,
+                 No_Beds: int,
+                 No_Baths: int,
+                 Area: float,
+                 Latitude: float,
+                 Longitude: float,
+                 Region: str,
+                 Sub_region: str):
         
-        # Assigning values to class attributes
-        self.area = area
-        self.bedrooms = bedrooms
-        self.bathrooms = bathrooms
-        self.stories = stories
-        self.mainroad = mainroad
-        self.guestroom = guestroom
-        self.basement = basement
-        self.hotwaterheating = hotwaterheating
-        self.airconditioning = airconditioning
-        self.parking = parking
-        self.prefarea = prefarea
-        self.furnishingstatus = furnishingstatus
+        # Mapping inputs to class attributes
+        self.Location = Location
+        self.Type = Type
+        self.No_Beds = No_Beds
+        self.No_Baths = No_Baths
+        self.Area = Area
+        self.Latitude = Latitude
+        self.Longitude = Longitude
+        self.Region = Region
+        self.Sub_region = Sub_region
 
     def get_data_as_data_frame(self):
         try:
+            # Keys must exactly match the column names used during model training
             custom_data_input_dict = {
-                "area": [self.area],
-                "bedrooms": [self.bedrooms],
-                "bathrooms": [self.bathrooms],
-                "stories": [self.stories],
-                "mainroad": [self.mainroad],
-                "guestroom": [self.guestroom],
-                "basement": [self.basement],
-                "hotwaterheating": [self.hotwaterheating],
-                "airconditioning": [self.airconditioning],
-                "parking": [self.parking],
-                "prefarea": [self.prefarea],
-                "furnishingstatus": [self.furnishingstatus],
+                "Location": [self.Location],
+                "Type": [self.Type],
+                "No_Beds": [self.No_Beds],
+                "No_Baths": [self.No_Baths],
+                "Area": [self.Area],
+                "Latitude": [self.Latitude],
+                "Longitude": [self.Longitude],
+                "Region": [self.Region],
+                "Sub_region": [self.Sub_region]
             }
+            
             return pd.DataFrame(custom_data_input_dict)
+            
         except Exception as e:
             raise CustomException(e, sys)
