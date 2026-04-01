@@ -5,7 +5,7 @@ from datetime import date
 DB_HOST = "localhost"
 DB_USER = "root"
 DB_PASSWORD = "admin123"
-DB_NAME = "house_price"
+DB_NAME = "dhaka_house_price"
 
 # General Project Constants
 PIPELINE_NAME: str = "house-price-prediction"
@@ -21,7 +21,7 @@ TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
 
 # Target & Schema
-TARGET_COLUMN = "price" 
+TARGET_COLUMN = "Price" 
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 CONFIG_FILE_PATH = os.path.join("config", "config.yaml")
 PARAMS_FILE_PATH = "params.yaml"
