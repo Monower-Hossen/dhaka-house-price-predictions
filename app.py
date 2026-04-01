@@ -11,7 +11,7 @@ app = application
 def index():
     return render_template('index.html')
 
-@app.route('/predictdata', methods=['GET', 'POST'])
+@app.route('/dhp_predictdata', methods=['GET', 'POST'])
 def predict_datapoint():
     if request.method == 'GET':
         return render_template('index.html')
@@ -23,21 +23,26 @@ def predict_datapoint():
                 return int(val) if val and val.strip() else default
             except (ValueError, TypeError):
                 return default
+        
+        def get_float_form(field_name, default=0.0):
+            """Helper to safely cast form fields to floats."""
+            try:
+                val = request.form.get(field_name)
+                return float(val) if val and val.strip() else default
+            except (ValueError, TypeError):
+                return default
 
         # Capture ALL fields from the form
         data = CustomData(
-            area=get_int_form('area'),
-            bedrooms=get_int_form('bedrooms'),
-            bathrooms=get_int_form('bathrooms'),
-            stories=get_int_form('stories'),
-            mainroad=request.form.get('mainroad'),
-            guestroom=request.form.get('guestroom'),
-            basement=request.form.get('basement'),
-            hotwaterheating=request.form.get('hotwaterheating'),
-            airconditioning=request.form.get('airconditioning'),
-            parking=get_int_form('parking'),
-            prefarea=request.form.get('prefarea'),
-            furnishingstatus=request.form.get('furnishingstatus')
+            Location=request.form.get('Location'),
+            Type=request.form.get('Type'),
+            No_Beds=get_int_form('No_Beds'),
+            No_Baths=get_int_form('No_Baths'),
+            Area=get_float_form('Area'),
+            Latitude=get_float_form('Latitude'),
+            Longitude=get_float_form('Longitude'),
+            Region=request.form.get('Region'),
+            Sub_region=request.form.get('Sub_region')
         )
 
         pred_df = data.get_data_as_data_frame()
