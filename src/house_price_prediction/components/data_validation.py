@@ -28,7 +28,7 @@ class DataValidation:
 
     def validate_number_of_columns(self, dataframe: DataFrame) -> bool:
         try:
-            schema_columns = self._schema_config.get("COLUMNS", {})
+            schema_columns = self._schema_config.get("columns", {})
             # Matches columns defined in your schema.yaml
             status = len(dataframe.columns) == len(schema_columns)
             logging.info(f"Is required column count present: [{status}]")
@@ -40,7 +40,7 @@ class DataValidation:
         try:
             dataframe_columns = df.columns
             missing_columns = []
-            schema_columns = self._schema_config.get("COLUMNS", {})
+            schema_columns = self._schema_config.get("columns", {})
             
             # Validate against the master COLUMNS list from schema.yaml
             for column in schema_columns.keys():
