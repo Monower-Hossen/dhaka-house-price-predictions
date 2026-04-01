@@ -38,7 +38,8 @@ class ConfigurationManager:
             root_dir=Path(root_dir),
             feature_store_file_path=config.get('raw_data_path', os.path.join(root_dir, FILE_NAME)),
             training_file_path=config.get('ingested_train_dir', os.path.join(root_dir, TRAIN_FILE_NAME)),
-            testing_file_path=config.get('ingested_test_dir', os.path.join(root_dir, TEST_FILE_NAME))
+            testing_file_path=config.get('ingested_test_dir', os.path.join(root_dir, TEST_FILE_NAME)),
+            source_data_path=config.get('source_data_path', os.path.join("notebook", "data", FILE_NAME))
         )
 
     def get_data_validation_config(self) -> DataValidationConfig:
