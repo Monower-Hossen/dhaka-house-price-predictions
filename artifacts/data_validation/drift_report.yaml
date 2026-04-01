@@ -1,0 +1,4400 @@
+metrics:
+- metric: DatasetDriftMetric
+  result:
+    dataset_drift: false
+    drift_share: 0.5
+    number_of_columns: 10
+    number_of_drifted_columns: 3
+    share_of_drifted_columns: 0.3
+- metric: DataDriftTable
+  result:
+    dataset_drift: false
+    drift_by_columns:
+      Area:
+        column_name: Area
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 450.0
+            - 2325.0
+            - 4200.0
+            - 6075.0
+            - 7950.0
+            - 9825.0
+            - 11700.0
+            - 13575.0
+            - 15450.0
+            - 17325.0
+            - 19200.0
+            y:
+            - 0.0005048888888888889
+            - 2.6074074074074075e-05
+            - 5.925925925925926e-07
+            - 5.925925925925926e-07
+            - 5.925925925925926e-07
+            - 0.0
+            - 0.0
+            - 0.0
+            - 0.0
+            - 5.925925925925926e-07
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - &id001 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          L1nEqts3pj8=
+        reference:
+          small_distribution:
+            x:
+            - 320.0
+            - 1788.0
+            - 3256.0
+            - 4724.0
+            - 6192.0
+            - 7660.0
+            - 9128.0
+            - 10596.0
+            - 12064.0
+            - 13532.0
+            - 15000.0
+            y:
+            - 0.0005888586133817741
+            - 8.250075688767787e-05
+            - 6.244323342415985e-06
+            - 1.1353315168029063e-06
+            - 5.676657584014531e-07
+            - 1.1353315168029063e-06
+            - 0.0
+            - 5.676657584014531e-07
+            - 0.0
+            - 1.8922191946715108e-07
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      Latitude:
+        column_name: Latitude
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 23.64456
+            - 23.669442
+            - 23.694323999999998
+            - 23.719206
+            - 23.744087999999998
+            - 23.76897
+            - 23.793852
+            - 23.818734
+            - 23.843616
+            - 23.868498
+            - 23.89338
+            y:
+            - 0.9377595584491524
+            - 0.4018969536211227
+            - 1.78620868276029
+            - 4.688797792246431
+            - 11.922942957424938
+            - 6.162419955523002
+            - 7.457421250525276
+            - 1.8755191168983048
+            - 4.822763443453472
+            - 0.13396565120702175
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          /dw+jOmVoT8=
+        reference:
+          small_distribution:
+            x:
+            - 23.64456
+            - 23.669442
+            - 23.694323999999998
+            - 23.719206
+            - 23.744087999999998
+            - 23.76897
+            - 23.793852
+            - 23.818734
+            - 23.843616
+            - 23.868498
+            - 23.89338
+            y:
+            - 1.0493976011216706
+            - 0.6475006475006977
+            - 1.5294411846134985
+            - 4.3427198599615755
+            - 12.9276853414776
+            - 5.470264090953388
+            - 7.613714510266824
+            - 1.8197000955620455
+            - 4.722289205048192
+            - 0.06698282560351088
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      Location:
+        column_name: Location
+        column_type: cat
+        current:
+          small_distribution:
+            x:
+            - 1st Colony, Mirpur, Dhaka
+            - 2nd Colony, Mirpur, Dhaka
+            - 3rd Colony, Mirpur, Dhaka
+            - Aainusbag, Dakshin Khan, Dhaka
+            - Abdul Aziz Lane, Lalbagh, Dhaka
+            - Abur Tek Road, Khilkhet, Dhaka
+            - Adarsha Nagar, Badda, Dhaka
+            - Advanced Police Town, Savar, Dhaka
+            - Aga Sadek Road, Bangshal, Dhaka
+            - Agamasi Lane, Bangshal, Dhaka
+            - Agargaon, Dhaka
+            - Ahmed Nagar, Mirpur, Dhaka
+            - Allabdirtec Road 1, Cantonment, Dhaka
+            - Alu Bazar, Bangshal, Dhaka
+            - Amligola, Lalbagh, Dhaka
+            - Amtola Masjid Goli Road, North Shahjahanpur, Dhaka
+            - Arambagh, Motijheel, Dhaka
+            - Asad Avenue, Mohammadpur, Dhaka
+            - Ashi Dag Road, Ibrahimpur, Dhaka
+            - Ashkona, Dakshin Khan, Dhaka
+            - Ashulia, Savar, Dhaka
+            - Ati Bazar, Keraniganj, Dhaka
+            - Atosh Khana Lane, Lalbagh, Dhaka
+            - Aurangzeb Road, Mohammadpur, Dhaka
+            - Azam Road, Mohammadpur, Dhaka
+            - Azimpur Road, Lalbagh, Dhaka
+            - Azimpur, Lalbagh, Dhaka
+            - Babar Road, Mohammadpur, Dhaka
+            - Bagan Bari Road, Cantonment, Dhaka
+            - Bagicha Mashjid Road, North Shahjahanpur, Dhaka
+            - Baitul Aman Housing Society, Adabor, Dhaka
+            - Bakshi Bazar, Lalbagh, Dhaka
+            - Banasree Main Road, Banasree, Dhaka
+            - Bangshal Road, Bangshal, Dhaka
+            - Bank Colony, Savar, Dhaka
+            - Bank Town, Savar, Dhaka
+            - Bash Bari Road, Mohammadpur, Dhaka
+            - Bashabo Madartek Road, Bashabo, Dhaka
+            - Bashir Uddin Road, Kalabagan, Dhaka
+            - Bashundhara Road, Bashundhara R-A, Dhaka
+            - Bata Goli, Maghbazar, Dhaka
+            - Bawnia, Turag, Dhaka
+            - Becharam Dewri, Bangshal, Dhaka
+            - Bepari Goli, Maghbazar, Dhaka
+            - Bhagalpur, Hazaribag, Dhaka
+            - Bhatuliya, Turag, Dhaka
+            - Bibir Bagicha, Jatra Bari, Dhaka
+            - Block A, Aftab Nagar, Dhaka
+            - Block A, Banasree, Dhaka
+            - Block A, Bashundhara R-A, Dhaka
+            - Block A, Lalmatia, Dhaka
+            - Block A, Niketan, Dhaka
+            - Block B, Aftab Nagar, Dhaka
+            - Block B, Banasree, Dhaka
+            - Block B, Bashundhara R-A, Dhaka
+            - Block B, Lalmatia, Dhaka
+            - Block B, Niketan, Dhaka
+            - Block C Extension, Banasree, Dhaka
+            - Block C, Aftab Nagar, Dhaka
+            - Block C, Banasree, Dhaka
+            - Block C, Bashundhara R-A, Dhaka
+            - Block C, Khilgaon, Dhaka
+            - Block C, Lalmatia, Dhaka
+            - Block C, Niketan, Dhaka
+            - Block D, Aftab Nagar, Dhaka
+            - Block D, Banasree, Dhaka
+            - Block D, Bashundhara R-A, Dhaka
+            - Block D, Lalmatia, Dhaka
+            - Block D, Niketan, Dhaka
+            - Block E, Aftab Nagar, Dhaka
+            - Block E, Banasree, Dhaka
+            - Block E, Bashundhara R-A, Dhaka
+            - Block E, Lalmatia, Dhaka
+            - Block E, Niketan, Dhaka
+            - Block F, Aftab Nagar, Dhaka
+            - Block F, Banasree, Dhaka
+            - Block F, Bashundhara R-A, Dhaka
+            - Block F, Niketan, Dhaka
+            - Block G, Banasree, Dhaka
+            - Block G, Bashundhara R-A, Dhaka
+            - Block H, Banasree, Dhaka
+            - Block H, Bashundhara R-A, Dhaka
+            - Block I, Bashundhara R-A, Dhaka
+            - Block J, Banasree, Dhaka
+            - Block J, Baridhara, Dhaka
+            - Block J, Bashundhara R-A, Dhaka
+            - Block K, Baridhara, Dhaka
+            - Bochila, Mohammadpur, Dhaka
+            - Boro Maghbazar, Maghbazar, Dhaka
+            - Bosila, Mohammadpur, Dhaka
+            - Bot Tola, Khilkhet, Dhaka
+            - Central Road, Dhanmondi, Dhaka
+            - Chad Uddan Housing, Mohammadpur, Dhaka
+            - Chairman Para, Dakshin Khan, Dhaka
+            - Chamilibag, Shantinagar, Dhaka
+            - Chandrima Model Town, Mohammadpur, Dhaka
+            - Chawk Bazar, Lalbagh, Dhaka
+            - Chowdhuripara, Khilgaon, Dhaka
+            - Circular Road, Dhanmondi, Dhaka
+            - Comfort Housing, Adabor, Dhaka
+            - Comilla Para, Badda, Dhaka
+            - Crescent Road, Kathalbagan, Dhaka
+            - DIT Road, Malibagh, Dhaka
+            - Dagormora, Savar, Dhaka
+            - Dakhshin Para, Mohakhali, Dhaka
+            - Dakkhin Paikpara, Mirpur, Dhaka
+            - Darussalam, Mirpur, Dhaka
+            - Dhaka Housing Main Road, Shyamoli, Dhaka
+            - Dhaka Uddan, Mohammadpur, Dhaka
+            - Dhalpur, Jatra Bari, Dhaka
+            - Dholpur New Road, Jatra Bari, Dhaka
+            - Dhour Mouza, Turag, Dhaka
+            - Dilkhushabag, Savar, Dhaka
+            - Doctor Goli, Maghbazar, Dhaka
+            - Dolphin Goli Road, Kalabagan, Dhaka
+            - Donia, Jatra Bari, Dhaka
+            - Doniya, Shyampur, Dhaka
+            - Dutabash Road, Baridhara, Dhaka
+            - East Azampur, Dakshin Khan, Dhaka
+            - East Bashabo, Bashabo, Dhaka
+            - East Kazipara, Mirpur, Dhaka
+            - East Maniknagar, Maniknagar, Dhaka
+            - East Monipur, Mirpur, Dhaka
+            - East Nakhalpara, Tejgaon, Dhaka
+            - East Rampura Road, Rampura, Dhaka
+            - East Rampura, Rampura, Dhaka
+            - East Shewrapara, Mirpur, Dhaka
+            - Elephant Road, New Market, Dhaka
+            - Enayet Ganj, Hazaribag, Dhaka
+            - Fakirapool, Motijheel, Dhaka
+            - Farmgate, Tejgaon, Dhaka
+            - Faydabad, Dakshin Khan, Dhaka
+            - Free School Street, Kathalbagan, Dhaka
+            - Gajanabi Road, Mohammadpur, Dhaka
+            - Ganaktuli Road, Hazaribag, Dhaka
+            - Gandaria, Sutrapur, Dhaka
+            - Gawair, Dakshin Khan, Dhaka
+            - Girls School Road, Dakshin Khan, Dhaka
+            - Goaltek, Dakshin Khan, Dhaka
+            - Gobindapur, Jatra Bari, Dhaka
+            - Golapbag, Jatra Bari, Dhaka
+            - Golden Street, Shyamoli, Dhaka
+            - Gopibag, Motijheel, Dhaka
+            - Goran, Khilgaon, Dhaka
+            - Green City Housing, Mohammadpur, Dhaka
+            - Green Road, Dhanmondi, Dhaka
+            - Green Road, Kalabagan, Dhaka
+            - Green Road, Kathalbagan, Dhaka
+            - Greenway Road, Maghbazar, Dhaka
+            - Gulbag, Malibagh, Dhaka
+            - Gulshan 1, Gulshan, Dhaka
+            - Gulshan 2, Gulshan, Dhaka
+            - Haji Abdullah Sarkar Lane, Bangshal, Dhaka
+            - Haji Goli, Agargaon, Dhaka
+            - Haji Rahim Box Lane, Lalbagh, Dhaka
+            - Hazi Abdur Rashid Lane, Bangshal, Dhaka
+            - Hossain Saheb Goli, Zafrabad, Dhaka
+            - Humayun Road, Mohammadpur, Dhaka
+            - Ibrahimpur Bazar Road, Ibrahimpur, Dhaka
+            - Idgaha road, Ibrahimpur, Dhaka
+            - Imandipur, Savar, Dhaka
+            - Indira Road, Tejgaon, Dhaka
+            - Islambag, Lalbagh, Dhaka
+            - Ismail Lane, Eskaton, Dhaka
+            - Jagannathpur, Badda, Dhaka
+            - Jamoj Road, Joar Sahara, Dhaka
+            - Janata Housing Society, Adabor, Dhaka
+            - Japan Garden City, Mohammadpur, Dhaka
+            - Jhigatola Road, Dhanmondi, Dhaka
+            - Jigatola, Hazaribag, Dhaka
+            - Julon Bari, Kotwali, Dhaka
+            - Jurain, Shyampur, Dhaka
+            - Kachukhet, Dhaka
+            - Kadamtala, Bashabo, Dhaka
+            - Kadamtali, Shyampur, Dhaka
+            - Kahektuli, Bangshal, Dhaka
+            - Kajla, Jatra Bari, Dhaka
+            - Kalabagan 1st Lane, Kalabagan, Dhaka
+            - Kalabagan 2nd Lane, Kalabagan, Dhaka
+            - Kalachandpur Main Road, Kalachandpur, Dhaka
+            - Kalachandpur School Road, Kalachandpur, Dhaka
+            - Kallyanpur, Mirpur, Dhaka
+            - Kamal Khan Road, Ibrahimpur, Dhaka
+            - Kamal Soroni Road, Agargaon, Dhaka
+            - Kamarpara, Turag, Dhaka
+            - Kamlapur, Motijheel, Dhaka
+            - Karatitola, Sutrapur, Dhaka
+            - Karwan Bazar, Tejgaon, Dhaka
+            - Katashur, Mohammadpur, Dhaka
+            - Katherpul, Sutrapur, Dhaka
+            - Kazi Motahar Hossain Road, Shegunbagicha, Dhaka
+            - Kazi Riaz Uddin Road, Lalbagh, Dhaka
+            - Khaje Dewan, Lalbagh, Dhaka
+            - Khajedal Sing Lane, Lalbagh, Dhaka
+            - Khan Bari Road, Kalachandpur, Dhaka
+            - Khanka E Razviya Road/Zia Soroni, Shyampur, Dhaka
+            - Khilbari Tek, Badda, Dhaka
+            - Khilji Road, Mohammadpur, Dhaka
+            - Khondokar Goli Road, Shiddheswari, Dhaka
+            - Kolta Bazar, Sutrapur, Dhaka
+            - Konapara, Demra, Dhaka
+            - Konapara, Jatra Bari, Dhaka
+            - Kosai Bari, Dakshin Khan, Dhaka
+            - Kotwali, Dhaka
+            - Krishi Bank Road, Badda, Dhaka
+            - Kutubkhali, Jatra Bari, Dhaka
+            - Kutum Goli, Agargaon, Dhaka
+            - Lake Circus Road, Kalabagan, Dhaka
+            - Lake City Concord, Khilkhet, Dhaka
+            - Lalbagh Road, Lalbagh, Dhaka
+            - Lane No 5, Mohakhali DOHS, Dhaka
+            - Lichu Bagan Road, Joar Sahara, Dhaka
+            - Luxmibazar, Sutrapur, Dhaka
+            - Madarbari, Uttar Khan, Dhaka
+            - Madartek, Bashabo, Dhaka
+            - Madhya Ajampur, Dakshin Khan, Dhaka
+            - Mahuthtuli, Bangshal, Dhaka
+            - Majed Sardar Road, Bangshal, Dhaka
+            - Majidpur, Savar, Dhaka
+            - Malibag Bazar Rd, Malibagh, Dhaka
+            - Malibag College Road, Malibagh, Dhaka
+            - Malibagh Chowdhury Para, Malibagh, Dhaka
+            - Malibagh First Lane, Malibagh, Dhaka
+            - Manda Road, Mugdapara, Dhaka
+            - Manda, Mugdapara, Dhaka
+            - Manikdi Road, Cantonment, Dhaka
+            - Manikdi, Cantonment, Dhaka
+            - Mansurabad Housing Society, Adabor, Dhaka
+            - Mastertek, Cantonment, Dhaka
+            - Matikata Road, Cantonment, Dhaka
+            - Matikata, Cantonment, Dhaka
+            - Matuail, Demra, Dhaka
+            - Meradia, Khilgaon, Dhaka
+            - Merul Badda, Badda, Dhaka
+            - Mia Para, Dakshin Khan, Dhaka
+            - Middle Badda, Badda, Dhaka
+            - Middle Bashabo, Bashabo, Dhaka
+            - Middle Monipur, Mirpur, Dhaka
+            - Middle Paikpara, Mirpur, Dhaka
+            - Mirbag Notun Rasta, Maghbazar, Dhaka
+            - Mirpur DOHS, Mirpur, Dhaka
+            - Mirpur Road, Shyamoli, Dhaka
+            - Mitford Road, Bangshal, Dhaka
+            - Moghbazar Kazi Office Lane, Maghbazar, Dhaka
+            - Mohammadi Homes R/A, Mohammadpur, Dhaka
+            - Mohammadi Housing LTD., Mohammadpur, Dhaka
+            - Mohammadia Housing Society, Mohammadpur, Dhaka
+            - Mohonpur Road, Shyamoli, Dhaka
+            - Momin Road, Ibrahimpur, Dhaka
+            - Moneshwar, Hazaribag, Dhaka
+            - Monipur, Mirpur, Dhaka
+            - Monipuri School Road, Ibrahimpur, Dhaka
+            - Monipuripara, Tejgaon, Dhaka
+            - Motijheel Extension, Motijheel, Dhaka
+            - Moushair, Dakshin Khan, Dhaka
+            - Mridha Bari, Kuril, Dhaka
+            - Muktijoddha Road, Kachukhet, Dhaka
+            - Muslim Modern College Road, Kachukhet, Dhaka
+            - Mymensingh Road, Shahbagh, Dhaka
+            - Nadda, Dhaka
+            - Namapara, Khilkhet, Dhaka
+            - Narinda, Sutrapur, Dhaka
+            - Nawabgonj, Lalbagh, Dhaka
+            - Nawabpur Road, Bangshal, Dhaka
+            - Naya Bazar, Bangshal, Dhaka
+            - Naya Paltan, Motijheel, Dhaka
+            - Nayatola, Maghbazar, Dhaka
+            - New Airport Road, Banani, Dhaka
+            - New Baily Road, Shiddheswari, Dhaka
+            - New Elephant Road, Hatirpool, Dhaka
+            - New Eskaton Road, Eskaton, Dhaka
+            - New Eskaton, Eskaton, Dhaka
+            - New Market, Dhaka
+            - Niketan, Road No 14/3, Niketan, Dhaka
+            - Nikunja 2, Nikunja, Dhaka
+            - Noa Nagar, Turag, Dhaka
+            - Nobodoy Housing Society, Mohammadpur, Dhaka
+            - North Adabor, Adabor, Dhaka
+            - North Azampur, Dakshin Khan, Dhaka
+            - North Bashabo, Bashabo, Dhaka
+            - North Dhanmondi Road, Kalabagan, Dhaka
+            - North Goran, Khilgaon, Dhaka
+            - North Ibrahimpur, Ibrahimpur, Dhaka
+            - North Jatra Bari, Jatra Bari, Dhaka
+            - North Kafrul Road, Ibrahimpur, Dhaka
+            - North Maniknagar, Maniknagar, Dhaka
+            - North Mugdapara, Mugdapara, Dhaka
+            - North Road, Dhanmondi, Dhaka
+            - North Shahjahanpur, Shahjahanpur, Dhaka
+            - Nurer Chala, Badda, Dhaka
+            - Nurjahan Road, Mohammadpur, Dhaka
+            - Old Eskaton, Eskaton, Dhaka
+            - Outer Circular Road, Maghbazar, Dhaka
+            - Outer Circular Road, Shiddheswari, Dhaka
+            - PC Culture Housing, Mohammadpur, Dhaka
+            - Paikpara, Mirpur, Dhaka
+            - Pallabi, Mirpur, Dhaka
+            - Panthapath, Kathalbagan, Dhaka
+            - Park Road, Baridhara, Dhaka
+            - Pearabagh Road, Maghbazar, Dhaka
+            - Pearl Street, Shyamoli, Dhaka
+            - Peer Saheber Goli, Shantinagar, Dhaka
+            - Pirerbag, Mirpur, Dhaka
+            - Police Fari road, Khilgaon, Dhaka
+            - Poribagh Road Number 2, Paribagh, Dhaka
+            - Postagola, Shyampur, Dhaka
+            - Pragati Soroni, Kuril, Dhaka
+            - Primary school Road, Ibrahimpur, Dhaka
+            - Purana Paltan, Motijheel, Dhaka
+            - Rajabazar, Tejgaon, Dhaka
+            - Rajarbag, Bashabo, Dhaka
+            - Rajarbagh, Motijheel, Dhaka
+            - Rajia Sultana Road, Mohammadpur, Dhaka
+            - Ranavola Road, Turag, Dhaka
+            - Rayer Bazaar, Hazaribag, Dhaka
+            - Road No 1, Banani, Dhaka
+            - Road No 1, Baridhara DOHS, Dhaka
+            - Road No 1, Baridhara, Dhaka
+            - Road No 1, Dhanmondi, Dhaka
+            - Road No 1, Shyamoli, Dhaka
+            - Road No 10, Baridhara DOHS, Dhaka
+            - Road No 10, Dhanmondi, Dhaka
+            - Road No 10A, Dhanmondi, Dhaka
+            - Road No 10B, Banani, Dhaka
+            - Road No 11, Baridhara, Dhaka
+            - Road No 11A, Dhanmondi, Dhaka
+            - Road No 12, Baridhara, Dhaka
+            - Road No 12, Dhanmondi, Dhaka
+            - Road No 12A, Dhanmondi, Dhaka
+            - Road No 13, Banani, Dhaka
+            - Road No 13, Baridhara, Dhaka
+            - Road No 14, Banani, Dhaka
+            - Road No 14A, Dhanmondi, Dhaka
+            - Road No 15, Dhanmondi, Dhaka
+            - Road No 16, Banani, Dhaka
+            - Road No 16, Dhanmondi, Dhaka
+            - Road No 18, Banani, Dhaka
+            - Road No 19, Mohakhali DOHS, Dhaka
+            - Road No 2, Banani, Dhaka
+            - Road No 2, Baridhara DOHS, Dhaka
+            - Road No 2, Dhanmondi, Dhaka
+            - Road No 2, Shyamoli, Dhaka
+            - Road No 21, Banani, Dhaka
+            - Road No 23, Banani, Dhaka
+            - Road No 23, Mohakhali DOHS, Dhaka
+            - Road No 28, Banani, Dhaka
+            - Road No 2A, Cantonment, Dhaka
+            - Road No 2A, Dhanmondi, Dhaka
+            - Road No 3, Banani, Dhaka
+            - Road No 3, Baridhara, Dhaka
+            - Road No 3, Dhanmondi, Dhaka
+            - Road No 3, Niketan, Dhaka
+            - Road No 3A, Dhanmondi, Dhaka
+            - Road No 4, Banani DOHS, Dhaka
+            - Road No 4, Banani, Dhaka
+            - Road No 4, Baridhara DOHS, Dhaka
+            - Road No 4, Dhanmondi, Dhaka
+            - Road No 4, Shyamoli, Dhaka
+            - Road No 4A, Dhanmondi, Dhaka
+            - Road No 5, Banani, Dhaka
+            - Road No 5, Baridhara, Dhaka
+            - Road No 5, Dhanmondi, Dhaka
+            - Road No 6, Banani DOHS, Dhaka
+            - Road No 6, Baridhara DOHS, Dhaka
+            - Road No 6, Baridhara, Dhaka
+            - Road No 6, Niketan, Dhaka
+            - Road No 6A, Dhanmondi, Dhaka
+            - Road No 7, Banani, Dhaka
+            - Road No 7, Baridhara DOHS, Dhaka
+            - Road No 7, Dhanmondi, Dhaka
+            - Road No 7A, Dhanmondi, Dhaka
+            - Road No 8, Dhanmondi, Dhaka
+            - Road No 8A, Dhanmondi, Dhaka
+            - Road No 9, Adabor, Dhaka
+            - Road No 9, Baridhara DOHS, Dhaka
+            - Road No 9, Niketan, Dhaka
+            - Road No 9A, Dhanmondi, Dhaka
+            - Rupnagar R/A, Mirpur, Dhaka
+            - Saat Rawza, Bangshal, Dhaka
+            - Sadek Khan Road, Hazaribag, Dhaka
+            - Salimuddin Market Road, Mirpur, Dhaka
+            - Salimullah Road, Mohammadpur, Dhaka
+            - Sarulia, Demra, Dhaka
+            - Sat Masjid Housing, Mohammadpur, Dhaka
+            - School Road, Mohakhali, Dhaka
+            - Science Museum To Water Tank Road, Agargaon, Dhaka
+            - Section 1, Mirpur, Dhaka
+            - Section 10, Mirpur, Dhaka
+            - Section 11, Mirpur, Dhaka
+            - Section 12, Mirpur, Dhaka
+            - Section 13, Mirpur, Dhaka
+            - Section 15, Mirpur, Dhaka
+            - Section 2, Mirpur, Dhaka
+            - Section 6, Mirpur, Dhaka
+            - Section 7, Mirpur, Dhaka
+            - Sector 1, Uttara, Dhaka
+            - Sector 10, Uttara, Dhaka
+            - Sector 11, Uttara, Dhaka
+            - Sector 12, Uttara, Dhaka
+            - Sector 13, Uttara, Dhaka
+            - Sector 14, Uttara, Dhaka
+            - Sector 15, Uttara, Dhaka
+            - Sector 17, Uttara, Dhaka
+            - Sector 18, Uttara, Dhaka
+            - Sector 3, Uttara, Dhaka
+            - Sector 4, Uttara, Dhaka
+            - Sector 5, Uttara, Dhaka
+            - Sector 6, Uttara, Dhaka
+            - Sector 7, Uttara, Dhaka
+            - Sector 9, Uttara, Dhaka
+            - Shah Kabir Mazar Road, Dakshin Khan, Dhaka
+            - Shahbagh Road, Paribagh, Dhaka
+            - Shaheed Tajuddin Ahmed Ave, Maghbazar, Dhaka
+            - Shahid Latif Road, Dakshin Khan, Dhaka
+            - Shahid Nagar, Lalbagh, Dhaka
+            - Shahid Syed Nazrul Islam Sharani, Motijheel, Dhaka
+            - Shahjadpur, Badda, Dhaka
+            - Shahjahan Road, Mohammadpur, Dhaka
+            - Shamibag, Sutrapur, Dhaka
+            - Shantibag - Shahidbag Road, Malibagh, Dhaka
+            - Shantibag, Malibagh, Dhaka
+            - Shantinagar Bazar Rd, Shantinagar, Dhaka
+            - Shantinagar Road, Shantinagar, Dhaka
+            - Shegunbagicha Road, Shegunbagicha, Dhaka
+            - Sheikhdi, Jatra Bari, Dhaka
+            - Shekhertek, Mohammadpur, Dhaka
+            - Sher Shah Suri Road, Mohammadpur, Dhaka
+            - Sher-E-Bangla Road, Dhanmondi, Dhaka
+            - Sher-E-Bangla Road, Hazaribag, Dhaka
+            - Sher-E-Bangla Road, Mohammadpur, Dhaka
+            - Shiddeswari Road, Shiddheswari, Dhaka
+            - Shiddheswari Lane, Shiddheswari, Dhaka
+            - Shonir Akhra, Shyampur, Dhaka
+            - Shukrabad, Dhanmondi, Dhaka
+            - Shyamoli Housing (2nd Project), Adabor, Dhaka
+            - Sir Sayed Road, Mohammadpur, Dhaka
+            - Sobhanbag, Savar, Dhaka
+            - Sohrawardy Avenue, Baridhara, Dhaka
+            - Sonatongor Masjid Road, Hazaribag, Dhaka
+            - South Azampur, Dakshin Khan, Dhaka
+            - South Badda, Badda, Dhaka
+            - South Banasree Project, Banasree, Dhaka
+            - South Baridhara Residential Area,D.I.T. Project, Badda, Dhaka
+            - South Bashabo, Bashabo, Dhaka
+            - South Chalabon, Dakshin Khan, Dhaka
+            - South Jatra Bari, Jatra Bari, Dhaka
+            - South Kafrul Road, Kafrul, Dhaka
+            - South Keraniganj, Keraniganj, Dhaka
+            - South Mollartek, Dakshin Khan, Dhaka
+            - South Monipur, Mirpur, Dhaka
+            - South Mugdapara, Mugdapara, Dhaka
+            - Srjani road, Ibrahimpur, Dhaka
+            - Sultangong Road, Hazaribag, Dhaka
+            - Tajmahal Road, Mohammadpur, Dhaka
+            - Tali office Road, Hazaribag, Dhaka
+            - Tallabag, Hazaribag, Dhaka
+            - Taltola goli, Maghbazar, Dhaka
+            - Taltola, Agargaon, Dhaka
+            - Taltola, Dakshin Khan, Dhaka
+            - Taltola, Khilgaon, Dhaka
+            - Tejgaon Industrial Area, Tejgaon, Dhaka
+            - Tejkunipara, Tejgaon, Dhaka
+            - Tikatuli, Sutrapur, Dhaka
+            - Tikka Para Road, Mohammadpur, Dhaka
+            - Tilpapara, Khilgaon, Dhaka
+            - Titas Gas Road, Rampura, Dhaka
+            - Titas Gas Road, Shyampur, Dhaka
+            - Topkhana Road, Shegunbagicha, Dhaka
+            - Turag, Dhaka
+            - Ullan, Rampura, Dhaka
+            - Uttar Badda, Badda, Dhaka
+            - Uttar Khan, Dhaka
+            - Vashantek, Cantonment, Dhaka
+            - Vatara, Badda, Dhaka
+            - Ward 98, Rampura, Dhaka
+            - Wari, Sutrapur, Dhaka
+            - Wasa Road, Mugdapara, Dhaka
+            - West Agargaon, Agargaon, Dhaka
+            - West Dhanmondi and Shangkar, Dhanmondi, Dhaka
+            - West Dhanmondi, Dhanmondi, Dhaka
+            - West Dolairpar, Shyampur, Dhaka
+            - West End Street, Hatirpool, Dhaka
+            - West Kafrul, Taltola, Dhaka
+            - West Kazipara, Mirpur, Dhaka
+            - West Malibag, Malibagh, Dhaka
+            - West Mollartek, Dakshin Khan, Dhaka
+            - West Monipur, Mirpur, Dhaka
+            - West Nakhalpara, Tejgaon, Dhaka
+            - West Rampura, Rampura, Dhaka
+            - West Shewrapara, Mirpur, Dhaka
+            - Zafrabad, Hazaribag, Dhaka
+            - Zindabahar 2nd Lane, Kotwali, Dhaka
+            - aziz Moholla, Mohammadpur, Dhaka
+            - rayer bazar-sanker road, Dhanmondi, Dhaka
+            y:
+            - 0
+            - 3
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 4
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 20
+            - 1
+            - 2
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 3
+            - 1
+            - 1
+            - 6
+            - 1
+            - 1
+            - 2
+            - 7
+            - 0
+            - 2
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 4
+            - 0
+            - 0
+            - 7
+            - 5
+            - 0
+            - 5
+            - 0
+            - 5
+            - 0
+            - 1
+            - 2
+            - 2
+            - 1
+            - 10
+            - 1
+            - 0
+            - 0
+            - 1
+            - 5
+            - 7
+            - 0
+            - 0
+            - 0
+            - 4
+            - 0
+            - 0
+            - 1
+            - 2
+            - 1
+            - 8
+            - 1
+            - 6
+            - 9
+            - 0
+            - 1
+            - 11
+            - 6
+            - 2
+            - 4
+            - 0
+            - 8
+            - 2
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 14
+            - 0
+            - 2
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 3
+            - 1
+            - 2
+            - 17
+            - 1
+            - 7
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 3
+            - 9
+            - 2
+            - 3
+            - 11
+            - 2
+            - 0
+            - 3
+            - 1
+            - 0
+            - 3
+            - 4
+            - 1
+            - 1
+            - 1
+            - 2
+            - 13
+            - 1
+            - 0
+            - 1
+            - 3
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 6
+            - 3
+            - 0
+            - 1
+            - 0
+            - 1
+            - 1
+            - 5
+            - 9
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 2
+            - 1
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 10
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 2
+            - 0
+            - 1
+            - 0
+            - 16
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 7
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 3
+            - 0
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 2
+            - 0
+            - 2
+            - 0
+            - 2
+            - 1
+            - 0
+            - 6
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 5
+            - 2
+            - 0
+            - 2
+            - 4
+            - 2
+            - 5
+            - 1
+            - 0
+            - 9
+            - 2
+            - 3
+            - 5
+            - 3
+            - 3
+            - 0
+            - 0
+            - 1
+            - 1
+            - 5
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 3
+            - 2
+            - 4
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 6
+            - 1
+            - 0
+            - 0
+            - 0
+            - 3
+            - 0
+            - 3
+            - 0
+            - 6
+            - 1
+            - 2
+            - 1
+            - 1
+            - 0
+            - 5
+            - 3
+            - 4
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 3
+            - 4
+            - 1
+            - 0
+            - 0
+            - 5
+            - 8
+            - 4
+            - 13
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 9
+            - 0
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 0
+            - 9
+            - 1
+            - 1
+            - 0
+            - 2
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 2
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 2
+            - 2
+            - 0
+            - 1
+            - 1
+            - 0
+            - 3
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 2
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 2
+            - 0
+            - 0
+            - 3
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 1
+            - 2
+            - 0
+            - 7
+            - 14
+            - 1
+            - 14
+            - 2
+            - 1
+            - 10
+            - 1
+            - 0
+            - 1
+            - 16
+            - 4
+            - 8
+            - 6
+            - 4
+            - 0
+            - 1
+            - 0
+            - 0
+            - 2
+            - 3
+            - 1
+            - 4
+            - 1
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 3
+            - 1
+            - 15
+            - 2
+            - 0
+            - 0
+            - 2
+            - 0
+            - 2
+            - 1
+            - 1
+            - 0
+            - 0
+            - 9
+            - 1
+            - 0
+            - 10
+            - 1
+            - 3
+            - 0
+            - 1
+            - 1
+            - 5
+            - 4
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 2
+            - 1
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 4
+            - 3
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 21
+            - 1
+            - 2
+            - 1
+            - 1
+            - 2
+            - 0
+            - 5
+            - 10
+            - 2
+            - 6
+            - 0
+            - 1
+            - 2
+            - 0
+            - 2
+            - 0
+            - 0
+            - 6
+            - 26
+            - 0
+            - 0
+            - 0
+            - 0
+        drift_detected: true
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          ob7i9M4w1D8=
+        reference:
+          small_distribution:
+            x:
+            - 1st Colony, Mirpur, Dhaka
+            - 2nd Colony, Mirpur, Dhaka
+            - 3rd Colony, Mirpur, Dhaka
+            - Aainusbag, Dakshin Khan, Dhaka
+            - Abdul Aziz Lane, Lalbagh, Dhaka
+            - Abur Tek Road, Khilkhet, Dhaka
+            - Adarsha Nagar, Badda, Dhaka
+            - Advanced Police Town, Savar, Dhaka
+            - Aga Sadek Road, Bangshal, Dhaka
+            - Agamasi Lane, Bangshal, Dhaka
+            - Agargaon, Dhaka
+            - Ahmed Nagar, Mirpur, Dhaka
+            - Allabdirtec Road 1, Cantonment, Dhaka
+            - Alu Bazar, Bangshal, Dhaka
+            - Amligola, Lalbagh, Dhaka
+            - Amtola Masjid Goli Road, North Shahjahanpur, Dhaka
+            - Arambagh, Motijheel, Dhaka
+            - Asad Avenue, Mohammadpur, Dhaka
+            - Ashi Dag Road, Ibrahimpur, Dhaka
+            - Ashkona, Dakshin Khan, Dhaka
+            - Ashulia, Savar, Dhaka
+            - Ati Bazar, Keraniganj, Dhaka
+            - Atosh Khana Lane, Lalbagh, Dhaka
+            - Aurangzeb Road, Mohammadpur, Dhaka
+            - Azam Road, Mohammadpur, Dhaka
+            - Azimpur Road, Lalbagh, Dhaka
+            - Azimpur, Lalbagh, Dhaka
+            - Babar Road, Mohammadpur, Dhaka
+            - Bagan Bari Road, Cantonment, Dhaka
+            - Bagicha Mashjid Road, North Shahjahanpur, Dhaka
+            - Baitul Aman Housing Society, Adabor, Dhaka
+            - Bakshi Bazar, Lalbagh, Dhaka
+            - Banasree Main Road, Banasree, Dhaka
+            - Bangshal Road, Bangshal, Dhaka
+            - Bank Colony, Savar, Dhaka
+            - Bank Town, Savar, Dhaka
+            - Bash Bari Road, Mohammadpur, Dhaka
+            - Bashabo Madartek Road, Bashabo, Dhaka
+            - Bashir Uddin Road, Kalabagan, Dhaka
+            - Bashundhara Road, Bashundhara R-A, Dhaka
+            - Bata Goli, Maghbazar, Dhaka
+            - Bawnia, Turag, Dhaka
+            - Becharam Dewri, Bangshal, Dhaka
+            - Bepari Goli, Maghbazar, Dhaka
+            - Bhagalpur, Hazaribag, Dhaka
+            - Bhatuliya, Turag, Dhaka
+            - Bibir Bagicha, Jatra Bari, Dhaka
+            - Block A, Aftab Nagar, Dhaka
+            - Block A, Banasree, Dhaka
+            - Block A, Bashundhara R-A, Dhaka
+            - Block A, Lalmatia, Dhaka
+            - Block A, Niketan, Dhaka
+            - Block B, Aftab Nagar, Dhaka
+            - Block B, Banasree, Dhaka
+            - Block B, Bashundhara R-A, Dhaka
+            - Block B, Lalmatia, Dhaka
+            - Block B, Niketan, Dhaka
+            - Block C Extension, Banasree, Dhaka
+            - Block C, Aftab Nagar, Dhaka
+            - Block C, Banasree, Dhaka
+            - Block C, Bashundhara R-A, Dhaka
+            - Block C, Khilgaon, Dhaka
+            - Block C, Lalmatia, Dhaka
+            - Block C, Niketan, Dhaka
+            - Block D, Aftab Nagar, Dhaka
+            - Block D, Banasree, Dhaka
+            - Block D, Bashundhara R-A, Dhaka
+            - Block D, Lalmatia, Dhaka
+            - Block D, Niketan, Dhaka
+            - Block E, Aftab Nagar, Dhaka
+            - Block E, Banasree, Dhaka
+            - Block E, Bashundhara R-A, Dhaka
+            - Block E, Lalmatia, Dhaka
+            - Block E, Niketan, Dhaka
+            - Block F, Aftab Nagar, Dhaka
+            - Block F, Banasree, Dhaka
+            - Block F, Bashundhara R-A, Dhaka
+            - Block F, Niketan, Dhaka
+            - Block G, Banasree, Dhaka
+            - Block G, Bashundhara R-A, Dhaka
+            - Block H, Banasree, Dhaka
+            - Block H, Bashundhara R-A, Dhaka
+            - Block I, Bashundhara R-A, Dhaka
+            - Block J, Banasree, Dhaka
+            - Block J, Baridhara, Dhaka
+            - Block J, Bashundhara R-A, Dhaka
+            - Block K, Baridhara, Dhaka
+            - Bochila, Mohammadpur, Dhaka
+            - Boro Maghbazar, Maghbazar, Dhaka
+            - Bosila, Mohammadpur, Dhaka
+            - Bot Tola, Khilkhet, Dhaka
+            - Central Road, Dhanmondi, Dhaka
+            - Chad Uddan Housing, Mohammadpur, Dhaka
+            - Chairman Para, Dakshin Khan, Dhaka
+            - Chamilibag, Shantinagar, Dhaka
+            - Chandrima Model Town, Mohammadpur, Dhaka
+            - Chawk Bazar, Lalbagh, Dhaka
+            - Chowdhuripara, Khilgaon, Dhaka
+            - Circular Road, Dhanmondi, Dhaka
+            - Comfort Housing, Adabor, Dhaka
+            - Comilla Para, Badda, Dhaka
+            - Crescent Road, Kathalbagan, Dhaka
+            - DIT Road, Malibagh, Dhaka
+            - Dagormora, Savar, Dhaka
+            - Dakhshin Para, Mohakhali, Dhaka
+            - Dakkhin Paikpara, Mirpur, Dhaka
+            - Darussalam, Mirpur, Dhaka
+            - Dhaka Housing Main Road, Shyamoli, Dhaka
+            - Dhaka Uddan, Mohammadpur, Dhaka
+            - Dhalpur, Jatra Bari, Dhaka
+            - Dholpur New Road, Jatra Bari, Dhaka
+            - Dhour Mouza, Turag, Dhaka
+            - Dilkhushabag, Savar, Dhaka
+            - Doctor Goli, Maghbazar, Dhaka
+            - Dolphin Goli Road, Kalabagan, Dhaka
+            - Donia, Jatra Bari, Dhaka
+            - Doniya, Shyampur, Dhaka
+            - Dutabash Road, Baridhara, Dhaka
+            - East Azampur, Dakshin Khan, Dhaka
+            - East Bashabo, Bashabo, Dhaka
+            - East Kazipara, Mirpur, Dhaka
+            - East Maniknagar, Maniknagar, Dhaka
+            - East Monipur, Mirpur, Dhaka
+            - East Nakhalpara, Tejgaon, Dhaka
+            - East Rampura Road, Rampura, Dhaka
+            - East Rampura, Rampura, Dhaka
+            - East Shewrapara, Mirpur, Dhaka
+            - Elephant Road, New Market, Dhaka
+            - Enayet Ganj, Hazaribag, Dhaka
+            - Fakirapool, Motijheel, Dhaka
+            - Farmgate, Tejgaon, Dhaka
+            - Faydabad, Dakshin Khan, Dhaka
+            - Free School Street, Kathalbagan, Dhaka
+            - Gajanabi Road, Mohammadpur, Dhaka
+            - Ganaktuli Road, Hazaribag, Dhaka
+            - Gandaria, Sutrapur, Dhaka
+            - Gawair, Dakshin Khan, Dhaka
+            - Girls School Road, Dakshin Khan, Dhaka
+            - Goaltek, Dakshin Khan, Dhaka
+            - Gobindapur, Jatra Bari, Dhaka
+            - Golapbag, Jatra Bari, Dhaka
+            - Golden Street, Shyamoli, Dhaka
+            - Gopibag, Motijheel, Dhaka
+            - Goran, Khilgaon, Dhaka
+            - Green City Housing, Mohammadpur, Dhaka
+            - Green Road, Dhanmondi, Dhaka
+            - Green Road, Kalabagan, Dhaka
+            - Green Road, Kathalbagan, Dhaka
+            - Greenway Road, Maghbazar, Dhaka
+            - Gulbag, Malibagh, Dhaka
+            - Gulshan 1, Gulshan, Dhaka
+            - Gulshan 2, Gulshan, Dhaka
+            - Haji Abdullah Sarkar Lane, Bangshal, Dhaka
+            - Haji Goli, Agargaon, Dhaka
+            - Haji Rahim Box Lane, Lalbagh, Dhaka
+            - Hazi Abdur Rashid Lane, Bangshal, Dhaka
+            - Hossain Saheb Goli, Zafrabad, Dhaka
+            - Humayun Road, Mohammadpur, Dhaka
+            - Ibrahimpur Bazar Road, Ibrahimpur, Dhaka
+            - Idgaha road, Ibrahimpur, Dhaka
+            - Imandipur, Savar, Dhaka
+            - Indira Road, Tejgaon, Dhaka
+            - Islambag, Lalbagh, Dhaka
+            - Ismail Lane, Eskaton, Dhaka
+            - Jagannathpur, Badda, Dhaka
+            - Jamoj Road, Joar Sahara, Dhaka
+            - Janata Housing Society, Adabor, Dhaka
+            - Japan Garden City, Mohammadpur, Dhaka
+            - Jhigatola Road, Dhanmondi, Dhaka
+            - Jigatola, Hazaribag, Dhaka
+            - Julon Bari, Kotwali, Dhaka
+            - Jurain, Shyampur, Dhaka
+            - Kachukhet, Dhaka
+            - Kadamtala, Bashabo, Dhaka
+            - Kadamtali, Shyampur, Dhaka
+            - Kahektuli, Bangshal, Dhaka
+            - Kajla, Jatra Bari, Dhaka
+            - Kalabagan 1st Lane, Kalabagan, Dhaka
+            - Kalabagan 2nd Lane, Kalabagan, Dhaka
+            - Kalachandpur Main Road, Kalachandpur, Dhaka
+            - Kalachandpur School Road, Kalachandpur, Dhaka
+            - Kallyanpur, Mirpur, Dhaka
+            - Kamal Khan Road, Ibrahimpur, Dhaka
+            - Kamal Soroni Road, Agargaon, Dhaka
+            - Kamarpara, Turag, Dhaka
+            - Kamlapur, Motijheel, Dhaka
+            - Karatitola, Sutrapur, Dhaka
+            - Karwan Bazar, Tejgaon, Dhaka
+            - Katashur, Mohammadpur, Dhaka
+            - Katherpul, Sutrapur, Dhaka
+            - Kazi Motahar Hossain Road, Shegunbagicha, Dhaka
+            - Kazi Riaz Uddin Road, Lalbagh, Dhaka
+            - Khaje Dewan, Lalbagh, Dhaka
+            - Khajedal Sing Lane, Lalbagh, Dhaka
+            - Khan Bari Road, Kalachandpur, Dhaka
+            - Khanka E Razviya Road/Zia Soroni, Shyampur, Dhaka
+            - Khilbari Tek, Badda, Dhaka
+            - Khilji Road, Mohammadpur, Dhaka
+            - Khondokar Goli Road, Shiddheswari, Dhaka
+            - Kolta Bazar, Sutrapur, Dhaka
+            - Konapara, Demra, Dhaka
+            - Konapara, Jatra Bari, Dhaka
+            - Kosai Bari, Dakshin Khan, Dhaka
+            - Kotwali, Dhaka
+            - Krishi Bank Road, Badda, Dhaka
+            - Kutubkhali, Jatra Bari, Dhaka
+            - Kutum Goli, Agargaon, Dhaka
+            - Lake Circus Road, Kalabagan, Dhaka
+            - Lake City Concord, Khilkhet, Dhaka
+            - Lalbagh Road, Lalbagh, Dhaka
+            - Lane No 5, Mohakhali DOHS, Dhaka
+            - Lichu Bagan Road, Joar Sahara, Dhaka
+            - Luxmibazar, Sutrapur, Dhaka
+            - Madarbari, Uttar Khan, Dhaka
+            - Madartek, Bashabo, Dhaka
+            - Madhya Ajampur, Dakshin Khan, Dhaka
+            - Mahuthtuli, Bangshal, Dhaka
+            - Majed Sardar Road, Bangshal, Dhaka
+            - Majidpur, Savar, Dhaka
+            - Malibag Bazar Rd, Malibagh, Dhaka
+            - Malibag College Road, Malibagh, Dhaka
+            - Malibagh Chowdhury Para, Malibagh, Dhaka
+            - Malibagh First Lane, Malibagh, Dhaka
+            - Manda Road, Mugdapara, Dhaka
+            - Manda, Mugdapara, Dhaka
+            - Manikdi Road, Cantonment, Dhaka
+            - Manikdi, Cantonment, Dhaka
+            - Mansurabad Housing Society, Adabor, Dhaka
+            - Mastertek, Cantonment, Dhaka
+            - Matikata Road, Cantonment, Dhaka
+            - Matikata, Cantonment, Dhaka
+            - Matuail, Demra, Dhaka
+            - Meradia, Khilgaon, Dhaka
+            - Merul Badda, Badda, Dhaka
+            - Mia Para, Dakshin Khan, Dhaka
+            - Middle Badda, Badda, Dhaka
+            - Middle Bashabo, Bashabo, Dhaka
+            - Middle Monipur, Mirpur, Dhaka
+            - Middle Paikpara, Mirpur, Dhaka
+            - Mirbag Notun Rasta, Maghbazar, Dhaka
+            - Mirpur DOHS, Mirpur, Dhaka
+            - Mirpur Road, Shyamoli, Dhaka
+            - Mitford Road, Bangshal, Dhaka
+            - Moghbazar Kazi Office Lane, Maghbazar, Dhaka
+            - Mohammadi Homes R/A, Mohammadpur, Dhaka
+            - Mohammadi Housing LTD., Mohammadpur, Dhaka
+            - Mohammadia Housing Society, Mohammadpur, Dhaka
+            - Mohonpur Road, Shyamoli, Dhaka
+            - Momin Road, Ibrahimpur, Dhaka
+            - Moneshwar, Hazaribag, Dhaka
+            - Monipur, Mirpur, Dhaka
+            - Monipuri School Road, Ibrahimpur, Dhaka
+            - Monipuripara, Tejgaon, Dhaka
+            - Motijheel Extension, Motijheel, Dhaka
+            - Moushair, Dakshin Khan, Dhaka
+            - Mridha Bari, Kuril, Dhaka
+            - Muktijoddha Road, Kachukhet, Dhaka
+            - Muslim Modern College Road, Kachukhet, Dhaka
+            - Mymensingh Road, Shahbagh, Dhaka
+            - Nadda, Dhaka
+            - Namapara, Khilkhet, Dhaka
+            - Narinda, Sutrapur, Dhaka
+            - Nawabgonj, Lalbagh, Dhaka
+            - Nawabpur Road, Bangshal, Dhaka
+            - Naya Bazar, Bangshal, Dhaka
+            - Naya Paltan, Motijheel, Dhaka
+            - Nayatola, Maghbazar, Dhaka
+            - New Airport Road, Banani, Dhaka
+            - New Baily Road, Shiddheswari, Dhaka
+            - New Elephant Road, Hatirpool, Dhaka
+            - New Eskaton Road, Eskaton, Dhaka
+            - New Eskaton, Eskaton, Dhaka
+            - New Market, Dhaka
+            - Niketan, Road No 14/3, Niketan, Dhaka
+            - Nikunja 2, Nikunja, Dhaka
+            - Noa Nagar, Turag, Dhaka
+            - Nobodoy Housing Society, Mohammadpur, Dhaka
+            - North Adabor, Adabor, Dhaka
+            - North Azampur, Dakshin Khan, Dhaka
+            - North Bashabo, Bashabo, Dhaka
+            - North Dhanmondi Road, Kalabagan, Dhaka
+            - North Goran, Khilgaon, Dhaka
+            - North Ibrahimpur, Ibrahimpur, Dhaka
+            - North Jatra Bari, Jatra Bari, Dhaka
+            - North Kafrul Road, Ibrahimpur, Dhaka
+            - North Maniknagar, Maniknagar, Dhaka
+            - North Mugdapara, Mugdapara, Dhaka
+            - North Road, Dhanmondi, Dhaka
+            - North Shahjahanpur, Shahjahanpur, Dhaka
+            - Nurer Chala, Badda, Dhaka
+            - Nurjahan Road, Mohammadpur, Dhaka
+            - Old Eskaton, Eskaton, Dhaka
+            - Outer Circular Road, Maghbazar, Dhaka
+            - Outer Circular Road, Shiddheswari, Dhaka
+            - PC Culture Housing, Mohammadpur, Dhaka
+            - Paikpara, Mirpur, Dhaka
+            - Pallabi, Mirpur, Dhaka
+            - Panthapath, Kathalbagan, Dhaka
+            - Park Road, Baridhara, Dhaka
+            - Pearabagh Road, Maghbazar, Dhaka
+            - Pearl Street, Shyamoli, Dhaka
+            - Peer Saheber Goli, Shantinagar, Dhaka
+            - Pirerbag, Mirpur, Dhaka
+            - Police Fari road, Khilgaon, Dhaka
+            - Poribagh Road Number 2, Paribagh, Dhaka
+            - Postagola, Shyampur, Dhaka
+            - Pragati Soroni, Kuril, Dhaka
+            - Primary school Road, Ibrahimpur, Dhaka
+            - Purana Paltan, Motijheel, Dhaka
+            - Rajabazar, Tejgaon, Dhaka
+            - Rajarbag, Bashabo, Dhaka
+            - Rajarbagh, Motijheel, Dhaka
+            - Rajia Sultana Road, Mohammadpur, Dhaka
+            - Ranavola Road, Turag, Dhaka
+            - Rayer Bazaar, Hazaribag, Dhaka
+            - Road No 1, Banani, Dhaka
+            - Road No 1, Baridhara DOHS, Dhaka
+            - Road No 1, Baridhara, Dhaka
+            - Road No 1, Dhanmondi, Dhaka
+            - Road No 1, Shyamoli, Dhaka
+            - Road No 10, Baridhara DOHS, Dhaka
+            - Road No 10, Dhanmondi, Dhaka
+            - Road No 10A, Dhanmondi, Dhaka
+            - Road No 10B, Banani, Dhaka
+            - Road No 11, Baridhara, Dhaka
+            - Road No 11A, Dhanmondi, Dhaka
+            - Road No 12, Baridhara, Dhaka
+            - Road No 12, Dhanmondi, Dhaka
+            - Road No 12A, Dhanmondi, Dhaka
+            - Road No 13, Banani, Dhaka
+            - Road No 13, Baridhara, Dhaka
+            - Road No 14, Banani, Dhaka
+            - Road No 14A, Dhanmondi, Dhaka
+            - Road No 15, Dhanmondi, Dhaka
+            - Road No 16, Banani, Dhaka
+            - Road No 16, Dhanmondi, Dhaka
+            - Road No 18, Banani, Dhaka
+            - Road No 19, Mohakhali DOHS, Dhaka
+            - Road No 2, Banani, Dhaka
+            - Road No 2, Baridhara DOHS, Dhaka
+            - Road No 2, Dhanmondi, Dhaka
+            - Road No 2, Shyamoli, Dhaka
+            - Road No 21, Banani, Dhaka
+            - Road No 23, Banani, Dhaka
+            - Road No 23, Mohakhali DOHS, Dhaka
+            - Road No 28, Banani, Dhaka
+            - Road No 2A, Cantonment, Dhaka
+            - Road No 2A, Dhanmondi, Dhaka
+            - Road No 3, Banani, Dhaka
+            - Road No 3, Baridhara, Dhaka
+            - Road No 3, Dhanmondi, Dhaka
+            - Road No 3, Niketan, Dhaka
+            - Road No 3A, Dhanmondi, Dhaka
+            - Road No 4, Banani DOHS, Dhaka
+            - Road No 4, Banani, Dhaka
+            - Road No 4, Baridhara DOHS, Dhaka
+            - Road No 4, Dhanmondi, Dhaka
+            - Road No 4, Shyamoli, Dhaka
+            - Road No 4A, Dhanmondi, Dhaka
+            - Road No 5, Banani, Dhaka
+            - Road No 5, Baridhara, Dhaka
+            - Road No 5, Dhanmondi, Dhaka
+            - Road No 6, Banani DOHS, Dhaka
+            - Road No 6, Baridhara DOHS, Dhaka
+            - Road No 6, Baridhara, Dhaka
+            - Road No 6, Niketan, Dhaka
+            - Road No 6A, Dhanmondi, Dhaka
+            - Road No 7, Banani, Dhaka
+            - Road No 7, Baridhara DOHS, Dhaka
+            - Road No 7, Dhanmondi, Dhaka
+            - Road No 7A, Dhanmondi, Dhaka
+            - Road No 8, Dhanmondi, Dhaka
+            - Road No 8A, Dhanmondi, Dhaka
+            - Road No 9, Adabor, Dhaka
+            - Road No 9, Baridhara DOHS, Dhaka
+            - Road No 9, Niketan, Dhaka
+            - Road No 9A, Dhanmondi, Dhaka
+            - Rupnagar R/A, Mirpur, Dhaka
+            - Saat Rawza, Bangshal, Dhaka
+            - Sadek Khan Road, Hazaribag, Dhaka
+            - Salimuddin Market Road, Mirpur, Dhaka
+            - Salimullah Road, Mohammadpur, Dhaka
+            - Sarulia, Demra, Dhaka
+            - Sat Masjid Housing, Mohammadpur, Dhaka
+            - School Road, Mohakhali, Dhaka
+            - Science Museum To Water Tank Road, Agargaon, Dhaka
+            - Section 1, Mirpur, Dhaka
+            - Section 10, Mirpur, Dhaka
+            - Section 11, Mirpur, Dhaka
+            - Section 12, Mirpur, Dhaka
+            - Section 13, Mirpur, Dhaka
+            - Section 15, Mirpur, Dhaka
+            - Section 2, Mirpur, Dhaka
+            - Section 6, Mirpur, Dhaka
+            - Section 7, Mirpur, Dhaka
+            - Sector 1, Uttara, Dhaka
+            - Sector 10, Uttara, Dhaka
+            - Sector 11, Uttara, Dhaka
+            - Sector 12, Uttara, Dhaka
+            - Sector 13, Uttara, Dhaka
+            - Sector 14, Uttara, Dhaka
+            - Sector 15, Uttara, Dhaka
+            - Sector 17, Uttara, Dhaka
+            - Sector 18, Uttara, Dhaka
+            - Sector 3, Uttara, Dhaka
+            - Sector 4, Uttara, Dhaka
+            - Sector 5, Uttara, Dhaka
+            - Sector 6, Uttara, Dhaka
+            - Sector 7, Uttara, Dhaka
+            - Sector 9, Uttara, Dhaka
+            - Shah Kabir Mazar Road, Dakshin Khan, Dhaka
+            - Shahbagh Road, Paribagh, Dhaka
+            - Shaheed Tajuddin Ahmed Ave, Maghbazar, Dhaka
+            - Shahid Latif Road, Dakshin Khan, Dhaka
+            - Shahid Nagar, Lalbagh, Dhaka
+            - Shahid Syed Nazrul Islam Sharani, Motijheel, Dhaka
+            - Shahjadpur, Badda, Dhaka
+            - Shahjahan Road, Mohammadpur, Dhaka
+            - Shamibag, Sutrapur, Dhaka
+            - Shantibag - Shahidbag Road, Malibagh, Dhaka
+            - Shantibag, Malibagh, Dhaka
+            - Shantinagar Bazar Rd, Shantinagar, Dhaka
+            - Shantinagar Road, Shantinagar, Dhaka
+            - Shegunbagicha Road, Shegunbagicha, Dhaka
+            - Sheikhdi, Jatra Bari, Dhaka
+            - Shekhertek, Mohammadpur, Dhaka
+            - Sher Shah Suri Road, Mohammadpur, Dhaka
+            - Sher-E-Bangla Road, Dhanmondi, Dhaka
+            - Sher-E-Bangla Road, Hazaribag, Dhaka
+            - Sher-E-Bangla Road, Mohammadpur, Dhaka
+            - Shiddeswari Road, Shiddheswari, Dhaka
+            - Shiddheswari Lane, Shiddheswari, Dhaka
+            - Shonir Akhra, Shyampur, Dhaka
+            - Shukrabad, Dhanmondi, Dhaka
+            - Shyamoli Housing (2nd Project), Adabor, Dhaka
+            - Sir Sayed Road, Mohammadpur, Dhaka
+            - Sobhanbag, Savar, Dhaka
+            - Sohrawardy Avenue, Baridhara, Dhaka
+            - Sonatongor Masjid Road, Hazaribag, Dhaka
+            - South Azampur, Dakshin Khan, Dhaka
+            - South Badda, Badda, Dhaka
+            - South Banasree Project, Banasree, Dhaka
+            - South Baridhara Residential Area,D.I.T. Project, Badda, Dhaka
+            - South Bashabo, Bashabo, Dhaka
+            - South Chalabon, Dakshin Khan, Dhaka
+            - South Jatra Bari, Jatra Bari, Dhaka
+            - South Kafrul Road, Kafrul, Dhaka
+            - South Keraniganj, Keraniganj, Dhaka
+            - South Mollartek, Dakshin Khan, Dhaka
+            - South Monipur, Mirpur, Dhaka
+            - South Mugdapara, Mugdapara, Dhaka
+            - Srjani road, Ibrahimpur, Dhaka
+            - Sultangong Road, Hazaribag, Dhaka
+            - Tajmahal Road, Mohammadpur, Dhaka
+            - Tali office Road, Hazaribag, Dhaka
+            - Tallabag, Hazaribag, Dhaka
+            - Taltola goli, Maghbazar, Dhaka
+            - Taltola, Agargaon, Dhaka
+            - Taltola, Dakshin Khan, Dhaka
+            - Taltola, Khilgaon, Dhaka
+            - Tejgaon Industrial Area, Tejgaon, Dhaka
+            - Tejkunipara, Tejgaon, Dhaka
+            - Tikatuli, Sutrapur, Dhaka
+            - Tikka Para Road, Mohammadpur, Dhaka
+            - Tilpapara, Khilgaon, Dhaka
+            - Titas Gas Road, Rampura, Dhaka
+            - Titas Gas Road, Shyampur, Dhaka
+            - Topkhana Road, Shegunbagicha, Dhaka
+            - Turag, Dhaka
+            - Ullan, Rampura, Dhaka
+            - Uttar Badda, Badda, Dhaka
+            - Uttar Khan, Dhaka
+            - Vashantek, Cantonment, Dhaka
+            - Vatara, Badda, Dhaka
+            - Ward 98, Rampura, Dhaka
+            - Wari, Sutrapur, Dhaka
+            - Wasa Road, Mugdapara, Dhaka
+            - West Agargaon, Agargaon, Dhaka
+            - West Dhanmondi and Shangkar, Dhanmondi, Dhaka
+            - West Dhanmondi, Dhanmondi, Dhaka
+            - West Dolairpar, Shyampur, Dhaka
+            - West End Street, Hatirpool, Dhaka
+            - West Kafrul, Taltola, Dhaka
+            - West Kazipara, Mirpur, Dhaka
+            - West Malibag, Malibagh, Dhaka
+            - West Mollartek, Dakshin Khan, Dhaka
+            - West Monipur, Mirpur, Dhaka
+            - West Nakhalpara, Tejgaon, Dhaka
+            - West Rampura, Rampura, Dhaka
+            - West Shewrapara, Mirpur, Dhaka
+            - Zafrabad, Hazaribag, Dhaka
+            - Zindabahar 2nd Lane, Kotwali, Dhaka
+            - aziz Moholla, Mohammadpur, Dhaka
+            - rayer bazar-sanker road, Dhanmondi, Dhaka
+            y:
+            - 1
+            - 2
+            - 0
+            - 1
+            - 1
+            - 2
+            - 9
+            - 0
+            - 1
+            - 3
+            - 1
+            - 18
+            - 1
+            - 2
+            - 3
+            - 1
+            - 4
+            - 7
+            - 4
+            - 67
+            - 3
+            - 7
+            - 1
+            - 0
+            - 3
+            - 1
+            - 2
+            - 9
+            - 3
+            - 3
+            - 35
+            - 2
+            - 0
+            - 11
+            - 19
+            - 5
+            - 10
+            - 15
+            - 1
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 1
+            - 1
+            - 4
+            - 3
+            - 4
+            - 28
+            - 16
+            - 1
+            - 10
+            - 3
+            - 13
+            - 4
+            - 4
+            - 13
+            - 22
+            - 8
+            - 46
+            - 3
+            - 3
+            - 1
+            - 8
+            - 20
+            - 25
+            - 3
+            - 5
+            - 1
+            - 18
+            - 12
+            - 8
+            - 1
+            - 14
+            - 2
+            - 39
+            - 0
+            - 16
+            - 36
+            - 3
+            - 10
+            - 37
+            - 8
+            - 11
+            - 14
+            - 2
+            - 43
+            - 13
+            - 3
+            - 1
+            - 5
+            - 2
+            - 1
+            - 6
+            - 79
+            - 1
+            - 12
+            - 0
+            - 8
+            - 2
+            - 4
+            - 4
+            - 10
+            - 6
+            - 1
+            - 53
+            - 6
+            - 15
+            - 8
+            - 4
+            - 2
+            - 3
+            - 2
+            - 1
+            - 14
+            - 52
+            - 0
+            - 1
+            - 34
+            - 12
+            - 1
+            - 17
+            - 0
+            - 1
+            - 20
+            - 10
+            - 2
+            - 1
+            - 2
+            - 4
+            - 42
+            - 8
+            - 5
+            - 2
+            - 7
+            - 4
+            - 5
+            - 2
+            - 2
+            - 3
+            - 5
+            - 5
+            - 20
+            - 6
+            - 1
+            - 3
+            - 4
+            - 2
+            - 5
+            - 27
+            - 21
+            - 1
+            - 1
+            - 1
+            - 2
+            - 2
+            - 1
+            - 1
+            - 1
+            - 1
+            - 4
+            - 0
+            - 1
+            - 5
+            - 2
+            - 5
+            - 1
+            - 5
+            - 32
+            - 4
+            - 1
+            - 1
+            - 15
+            - 5
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 1
+            - 49
+            - 2
+            - 2
+            - 0
+            - 3
+            - 1
+            - 15
+            - 9
+            - 5
+            - 1
+            - 1
+            - 2
+            - 1
+            - 6
+            - 1
+            - 6
+            - 1
+            - 0
+            - 3
+            - 4
+            - 3
+            - 2
+            - 1
+            - 4
+            - 1
+            - 10
+            - 4
+            - 1
+            - 5
+            - 1
+            - 3
+            - 0
+            - 1
+            - 11
+            - 5
+            - 2
+            - 2
+            - 0
+            - 7
+            - 4
+            - 3
+            - 5
+            - 9
+            - 8
+            - 1
+            - 25
+            - 12
+            - 4
+            - 3
+            - 20
+            - 14
+            - 8
+            - 5
+            - 1
+            - 25
+            - 8
+            - 26
+            - 40
+            - 1
+            - 13
+            - 2
+            - 1
+            - 1
+            - 7
+            - 19
+            - 0
+            - 1
+            - 1
+            - 4
+            - 1
+            - 1
+            - 6
+            - 2
+            - 0
+            - 1
+            - 1
+            - 5
+            - 1
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 6
+            - 2
+            - 9
+            - 1
+            - 3
+            - 5
+            - 14
+            - 3
+            - 0
+            - 0
+            - 2
+            - 1
+            - 42
+            - 6
+            - 11
+            - 7
+            - 3
+            - 1
+            - 5
+            - 2
+            - 4
+            - 0
+            - 2
+            - 1
+            - 17
+            - 8
+            - 6
+            - 1
+            - 2
+            - 6
+            - 22
+            - 10
+            - 53
+            - 1
+            - 1
+            - 1
+            - 2
+            - 4
+            - 41
+            - 1
+            - 4
+            - 1
+            - 1
+            - 0
+            - 6
+            - 2
+            - 8
+            - 6
+            - 2
+            - 1
+            - 42
+            - 1
+            - 0
+            - 1
+            - 7
+            - 0
+            - 0
+            - 1
+            - 3
+            - 1
+            - 1
+            - 3
+            - 1
+            - 9
+            - 2
+            - 0
+            - 3
+            - 1
+            - 1
+            - 1
+            - 2
+            - 1
+            - 9
+            - 1
+            - 2
+            - 0
+            - 1
+            - 13
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 4
+            - 1
+            - 2
+            - 1
+            - 4
+            - 3
+            - 2
+            - 4
+            - 2
+            - 4
+            - 1
+            - 4
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 2
+            - 1
+            - 4
+            - 3
+            - 0
+            - 8
+            - 1
+            - 1
+            - 0
+            - 4
+            - 4
+            - 3
+            - 4
+            - 3
+            - 3
+            - 1
+            - 1
+            - 3
+            - 2
+            - 28
+            - 50
+            - 19
+            - 44
+            - 2
+            - 15
+            - 24
+            - 14
+            - 8
+            - 3
+            - 80
+            - 24
+            - 39
+            - 16
+            - 6
+            - 1
+            - 4
+            - 7
+            - 11
+            - 18
+            - 22
+            - 9
+            - 20
+            - 7
+            - 3
+            - 1
+            - 1
+            - 2
+            - 2
+            - 1
+            - 11
+            - 3
+            - 2
+            - 2
+            - 8
+            - 1
+            - 1
+            - 1
+            - 1
+            - 16
+            - 2
+            - 13
+            - 25
+            - 1
+            - 3
+            - 4
+            - 1
+            - 7
+            - 7
+            - 0
+            - 5
+            - 2
+            - 9
+            - 1
+            - 13
+            - 29
+            - 3
+            - 6
+            - 1
+            - 2
+            - 1
+            - 21
+            - 3
+            - 6
+            - 1
+            - 2
+            - 3
+            - 3
+            - 7
+            - 0
+            - 0
+            - 3
+            - 1
+            - 7
+            - 2
+            - 5
+            - 6
+            - 3
+            - 4
+            - 1
+            - 1
+            - 4
+            - 1
+            - 0
+            - 87
+            - 0
+            - 6
+            - 7
+            - 1
+            - 7
+            - 4
+            - 20
+            - 69
+            - 5
+            - 11
+            - 2
+            - 0
+            - 6
+            - 4
+            - 2
+            - 7
+            - 5
+            - 24
+            - 85
+            - 1
+            - 1
+            - 2
+            - 1
+        stattest_name: Jensen-Shannon distance
+        stattest_threshold: 0.1
+      Longitude:
+        column_name: Longitude
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 90.24643
+            - 90.269828
+            - 90.293226
+            - 90.316624
+            - 90.340022
+            - 90.36342
+            - 90.386818
+            - 90.410216
+            - 90.433614
+            - 90.457012
+            - 90.48041
+            y:
+            - 0.6648241540112568
+            - 0.0
+            - 0.0
+            - 0.09497487914446527
+            - 8.215327045996245
+            - 11.871859893058158
+            - 5.888442506956847
+            - 11.15954829947467
+            - 4.416331880217635
+            - 0.4273869561500937
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          so/jZvaZnT8=
+        reference:
+          small_distribution:
+            x:
+            - 90.24643
+            - 90.269828
+            - 90.293226
+            - 90.316624
+            - 90.340022
+            - 90.36342
+            - 90.386818
+            - 90.410216
+            - 90.433614
+            - 90.457012
+            - 90.48041
+            y:
+            - 0.5461055550806753
+            - 0.0
+            - 0.0
+            - 0.09497487914446527
+            - 8.476507963643524
+            - 11.586935255624761
+            - 6.375188762572231
+            - 10.56595530482176
+            - 4.475691179682926
+            - 0.6173367144390242
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      No_Baths:
+        column_name: No_Baths
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 1.0
+            - 1.9
+            - 2.8
+            - 3.7
+            - 4.6
+            - 5.5
+            - 6.4
+            - 7.3
+            - 8.2
+            - 9.1
+            - 10.0
+            y:
+            - 0.014814814814814815
+            - 0.3567901234567902
+            - 0.576543209876543
+            - 0.1543209876543211
+            - 0.002469135802469135
+            - 0.002469135802469135
+            - 0.0
+            - 0.0
+            - 0.0
+            - 0.0037037037037037025
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          U7CD8EmgoD8=
+        reference:
+          small_distribution:
+            x:
+            - 1.0
+            - 1.9
+            - 2.8
+            - 3.7
+            - 4.6
+            - 5.5
+            - 6.4
+            - 7.3
+            - 8.2
+            - 9.1
+            - 10.0
+            y:
+            - 0.019444444444444445
+            - 0.35277777777777786
+            - 0.5827160493827158
+            - 0.13425925925925933
+            - 0.013888888888888883
+            - 0.002160493827160493
+            - 0.0006172839506172844
+            - 0.0012345679012345687
+            - 0.0
+            - 0.004012345679012344
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      No_Beds:
+        column_name: No_Beds
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 1.0
+            - 5.5
+            - 10.0
+            - 14.5
+            - 19.0
+            - 23.5
+            - 28.0
+            - 32.5
+            - 37.0
+            - 41.5
+            - 46.0
+            y:
+            - 0.22123456790123458
+            - 0.0
+            - 0.0002469135802469136
+            - 0.0002469135802469136
+            - 0.0
+            - 0.0002469135802469136
+            - 0.0
+            - 0.0
+            - 0.0
+            - 0.0002469135802469136
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          qfcgRD02pj8=
+        reference:
+          small_distribution:
+            x:
+            - 1.0
+            - 4.5
+            - 8.0
+            - 11.5
+            - 15.0
+            - 18.5
+            - 22.0
+            - 25.5
+            - 29.0
+            - 32.5
+            - 36.0
+            y:
+            - 0.2823809523809524
+            - 0.0019047619047619048
+            - 0.0002380952380952381
+            - 7.936507936507937e-05
+            - 0.0004761904761904762
+            - 0.0002380952380952381
+            - 0.00015873015873015873
+            - 7.936507936507937e-05
+            - 7.936507936507937e-05
+            - 7.936507936507937e-05
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      Price:
+        column_name: Price
+        column_type: num
+        current:
+          small_distribution:
+            x:
+            - 1300000.0
+            - 9270000.0
+            - 17240000.0
+            - 25210000.0
+            - 33180000.0
+            - 41150000.0
+            - 49120000.0
+            - 57090000.0
+            - 65060000.0
+            - 73030000.0
+            - 81000000.0
+            y:
+            - 8.866583019657047e-08
+            - 2.495469120312282e-08
+            - 6.2735257214554585e-09
+            - 1.3941168269901018e-09
+            - 1.8123518750871323e-09
+            - 6.970584134950509e-10
+            - 5.576467307960407e-10
+            - 6.970584134950509e-10
+            - 0.0
+            - 4.182350480970305e-10
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          qS3JmaapmT8=
+        reference:
+          small_distribution:
+            x:
+            - 500000.0
+            - 8581280.0
+            - 16662560.0
+            - 24743840.0
+            - 32825120.0
+            - 40906400.0
+            - 48987680.0
+            - 57068960.0
+            - 65150240.0
+            - 73231520.0
+            - 81312800.0
+            y:
+            - 8.053592170217258e-08
+            - 3.0316979488397877e-08
+            - 6.633987575125613e-09
+            - 2.3029905053544876e-09
+            - 2.062379557033869e-09
+            - 4.812218966412361e-10
+            - 6.187138671101608e-10
+            - 2.749839409378492e-10
+            - 1.374919704689246e-10
+            - 3.7810291878954266e-10
+        stattest_name: Wasserstein distance (normed)
+        stattest_threshold: 0.1
+      Region:
+        column_name: Region
+        column_type: cat
+        current:
+          small_distribution:
+            x:
+            - Adabor
+            - AftabNagar
+            - Agargaon
+            - Badda
+            - Banani
+            - BananiDOHS
+            - Banasree
+            - Bangshal
+            - Baridhara
+            - BaridharaDOHS
+            - Bashabo
+            - BashundharaR-A
+            - Cantonment
+            - DakshinKhan
+            - Demra
+            - Dhanmondi
+            - Eskaton
+            - Gulshan
+            - Hatirpool
+            - Hazaribag
+            - Ibrahimpur
+            - JatraBari
+            - JoarSahara
+            - Kachukhet
+            - Kafrul
+            - Kalabagan
+            - Kalachandpur
+            - Kathalbagan
+            - Keraniganj
+            - Khilgaon
+            - Khilkhet
+            - Kotwali
+            - Kuril
+            - Lalbagh
+            - Lalmatia
+            - Maghbazar
+            - Malibagh
+            - Maniknagar
+            - Mirpur
+            - Mohakhali
+            - MohakhaliDOHS
+            - Mohammadpur
+            - Motijheel
+            - Mugdapara
+            - Nadda
+            - NewMarket
+            - Niketan
+            - Nikunja
+            - NorthShahjahanpur
+            - Paribagh
+            - Rampura
+            - Savar
+            - Shahbagh
+            - Shahjahanpur
+            - Shantinagar
+            - Shegunbagicha
+            - Shiddheswari
+            - Shyamoli
+            - Shyampur
+            - Sutrapur
+            - Taltola
+            - Tejgaon
+            - Turag
+            - UttarKhan
+            - Uttara
+            - Zafrabad
+            y:
+            - 14
+            - 10
+            - 7
+            - 43
+            - 8
+            - 0
+            - 36
+            - 3
+            - 5
+            - 3
+            - 25
+            - 62
+            - 15
+            - 57
+            - 2
+            - 50
+            - 8
+            - 14
+            - 0
+            - 37
+            - 4
+            - 13
+            - 2
+            - 0
+            - 1
+            - 5
+            - 2
+            - 2
+            - 7
+            - 14
+            - 1
+            - 2
+            - 1
+            - 8
+            - 5
+            - 12
+            - 3
+            - 1
+            - 168
+            - 3
+            - 0
+            - 72
+            - 4
+            - 2
+            - 0
+            - 3
+            - 5
+            - 1
+            - 1
+            - 2
+            - 11
+            - 14
+            - 0
+            - 3
+            - 1
+            - 0
+            - 12
+            - 8
+            - 15
+            - 15
+            - 1
+            - 20
+            - 4
+            - 1
+            - 51
+            - 1
+        drift_detected: true
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          phpSbyohvz8=
+        reference:
+          small_distribution:
+            x:
+            - Adabor
+            - AftabNagar
+            - Agargaon
+            - Badda
+            - Banani
+            - BananiDOHS
+            - Banasree
+            - Bangshal
+            - Baridhara
+            - BaridharaDOHS
+            - Bashabo
+            - BashundharaR-A
+            - Cantonment
+            - DakshinKhan
+            - Demra
+            - Dhanmondi
+            - Eskaton
+            - Gulshan
+            - Hatirpool
+            - Hazaribag
+            - Ibrahimpur
+            - JatraBari
+            - JoarSahara
+            - Kachukhet
+            - Kafrul
+            - Kalabagan
+            - Kalachandpur
+            - Kathalbagan
+            - Keraniganj
+            - Khilgaon
+            - Khilkhet
+            - Kotwali
+            - Kuril
+            - Lalbagh
+            - Lalmatia
+            - Maghbazar
+            - Malibagh
+            - Maniknagar
+            - Mirpur
+            - Mohakhali
+            - MohakhaliDOHS
+            - Mohammadpur
+            - Motijheel
+            - Mugdapara
+            - Nadda
+            - NewMarket
+            - Niketan
+            - Nikunja
+            - NorthShahjahanpur
+            - Paribagh
+            - Rampura
+            - Savar
+            - Shahbagh
+            - Shahjahanpur
+            - Shantinagar
+            - Shegunbagicha
+            - Shiddheswari
+            - Shyamoli
+            - Shyampur
+            - Sutrapur
+            - Taltola
+            - Tejgaon
+            - Turag
+            - UttarKhan
+            - Uttara
+            - Zafrabad
+            y:
+            - 74
+            - 58
+            - 39
+            - 185
+            - 30
+            - 2
+            - 124
+            - 37
+            - 25
+            - 6
+            - 104
+            - 261
+            - 64
+            - 155
+            - 19
+            - 170
+            - 19
+            - 48
+            - 7
+            - 131
+            - 21
+            - 45
+            - 5
+            - 7
+            - 1
+            - 16
+            - 8
+            - 17
+            - 28
+            - 56
+            - 5
+            - 6
+            - 2
+            - 24
+            - 34
+            - 34
+            - 42
+            - 1
+            - 662
+            - 9
+            - 3
+            - 326
+            - 31
+            - 24
+            - 1
+            - 2
+            - 14
+            - 2
+            - 4
+            - 5
+            - 47
+            - 46
+            - 1
+            - 17
+            - 12
+            - 6
+            - 16
+            - 33
+            - 73
+            - 34
+            - 0
+            - 43
+            - 9
+            - 1
+            - 267
+            - 2
+        stattest_name: Jensen-Shannon distance
+        stattest_threshold: 0.1
+      Sub_region:
+        column_name: Sub_region
+        column_type: cat
+        current:
+          small_distribution:
+            x:
+            - ' Road No 14/3'
+            - 1st Colony
+            - 2nd Colony
+            - 3rd Colony
+            - Aainusbag
+            - Abdul Aziz Lane
+            - Abur Tek Road
+            - Adarsha Nagar
+            - Advanced Police Town
+            - Aga Sadek Road
+            - Agamasi Lane
+            - Ahmed Nagar
+            - Allabdirtec Road 1
+            - Alu Bazar
+            - Amligola
+            - Amtola Masjid Goli Road
+            - Arambagh
+            - Asad Avenue
+            - Ashi Dag Road
+            - Ashkona
+            - Ashulia
+            - Ati Bazar
+            - Atosh Khana Lane
+            - Aurangzeb Road
+            - Azam Road
+            - Azimpur
+            - Azimpur Road
+            - Babar Road
+            - Bagan Bari Road
+            - Bagicha Mashjid Road
+            - Baitul Aman Housing Society
+            - Bakshi Bazar
+            - Banasree Main Road
+            - Bangshal Road
+            - Bank Colony
+            - Bank Town
+            - Bash Bari Road
+            - Bashabo Madartek Road
+            - Bashir Uddin Road
+            - Bashundhara Road
+            - Bata Goli
+            - Bawnia
+            - Becharam Dewri
+            - Bepari Goli
+            - Bhagalpur
+            - Bhatuliya
+            - Bibir Bagicha
+            - Block A
+            - Block B
+            - Block C
+            - Block C Extension
+            - Block D
+            - Block E
+            - Block F
+            - Block G
+            - Block H
+            - Block I
+            - Block J
+            - Block K
+            - Bochila
+            - Boro Maghbazar
+            - Bosila
+            - Bot Tola
+            - Central Road
+            - Chad Uddan Housing
+            - Chairman Para
+            - Chamilibag
+            - Chandrima Model Town
+            - Chawk Bazar
+            - Chowdhuripara
+            - Circular Road
+            - Comfort Housing
+            - Comilla Para
+            - Crescent Road
+            - D.I.T. Project
+            - DIT Road
+            - Dagormora
+            - Dakhshin Para
+            - Dakkhin Paikpara
+            - Darussalam
+            - Dhaka Housing Main Road
+            - Dhaka Uddan
+            - Dhalpur
+            - Dholpur New Road
+            - Dhour Mouza
+            - Dilkhushabag
+            - Doctor Goli
+            - Dolphin Goli Road
+            - Donia
+            - Doniya
+            - Dutabash Road
+            - East Azampur
+            - East Bashabo
+            - East Kazipara
+            - East Maniknagar
+            - East Monipur
+            - East Nakhalpara
+            - East Rampura
+            - East Rampura Road
+            - East Shewrapara
+            - Elephant Road
+            - Enayet Ganj
+            - Fakirapool
+            - Farmgate
+            - Faydabad
+            - Free School Street
+            - Gajanabi Road
+            - Ganaktuli Road
+            - Gandaria
+            - Gawair
+            - Girls School Road
+            - Goaltek
+            - Gobindapur
+            - Golapbag
+            - Golden Street
+            - Gopibag
+            - Goran
+            - Green City Housing
+            - Green Road
+            - Greenway Road
+            - Gulbag
+            - Gulshan 1
+            - Gulshan 2
+            - Haji Abdullah Sarkar Lane
+            - Haji Goli
+            - Haji Rahim Box Lane
+            - Hazi Abdur Rashid Lane
+            - Hossain Saheb Goli
+            - Humayun Road
+            - Ibrahimpur Bazar Road
+            - Idgaha road
+            - Imandipur
+            - Indira Road
+            - Islambag
+            - Ismail Lane
+            - Jagannathpur
+            - Jamoj Road
+            - Janata Housing Society
+            - Japan Garden City
+            - Jhigatola Road
+            - Jigatola
+            - Julon Bari
+            - Jurain
+            - Kadamtala
+            - Kadamtali
+            - Kahektuli
+            - Kajla
+            - Kalabagan 1st Lane
+            - Kalabagan 2nd Lane
+            - Kalachandpur Main Road
+            - Kalachandpur School Road
+            - Kallyanpur
+            - Kamal Khan Road
+            - Kamal Soroni Road
+            - Kamarpara
+            - Kamlapur
+            - Karatitola
+            - Karwan Bazar
+            - Katashur
+            - Katherpul
+            - Kazi Motahar Hossain Road
+            - Kazi Riaz Uddin Road
+            - Khaje Dewan
+            - Khajedal Sing Lane
+            - Khan Bari Road
+            - Khanka E Razviya Road/Zia Soroni
+            - Khilbari Tek
+            - Khilji Road
+            - Khondokar Goli Road
+            - Kolta Bazar
+            - Konapara
+            - Kosai Bari
+            - Krishi Bank Road
+            - Kutubkhali
+            - Kutum Goli
+            - Lake Circus Road
+            - Lake City Concord
+            - Lalbagh Road
+            - Lane No 5
+            - Lichu Bagan Road
+            - Luxmibazar
+            - Madarbari
+            - Madartek
+            - Madhya Ajampur
+            - Mahuthtuli
+            - Majed Sardar Road
+            - Majidpur
+            - Malibag Bazar Rd
+            - Malibag College Road
+            - Malibagh Chowdhury Para
+            - Malibagh First Lane
+            - Manda
+            - Manda Road
+            - Manikdi
+            - Manikdi Road
+            - Mansurabad Housing Society
+            - Mastertek
+            - Matikata
+            - Matikata Road
+            - Matuail
+            - Meradia
+            - Merul Badda
+            - Mia Para
+            - Middle Badda
+            - Middle Bashabo
+            - Middle Monipur
+            - Middle Paikpara
+            - Mirbag Notun Rasta
+            - Mirpur DOHS
+            - Mirpur Road
+            - Mitford Road
+            - Moghbazar Kazi Office Lane
+            - Mohammadi Homes R/A
+            - Mohammadi Housing LTD.
+            - Mohammadia Housing Society
+            - Mohonpur Road
+            - Momin Road
+            - Moneshwar
+            - Monipur
+            - Monipuri School Road
+            - Monipuripara
+            - Motijheel Extension
+            - Moushair
+            - Mridha Bari
+            - Muktijoddha Road
+            - Muslim Modern College Road
+            - Mymensingh Road
+            - Namapara
+            - Narinda
+            - Nawabgonj
+            - Nawabpur Road
+            - Naya Bazar
+            - Naya Paltan
+            - Nayatola
+            - New Airport Road
+            - New Baily Road
+            - New Elephant Road
+            - New Eskaton
+            - New Eskaton Road
+            - Nikunja 2
+            - Noa Nagar
+            - Nobodoy Housing Society
+            - North Adabor
+            - North Azampur
+            - North Bashabo
+            - North Dhanmondi Road
+            - North Goran
+            - North Ibrahimpur
+            - North Jatra Bari
+            - North Kafrul Road
+            - North Maniknagar
+            - North Mugdapara
+            - North Road
+            - North Shahjahanpur
+            - Nurer Chala
+            - Nurjahan Road
+            - Old Eskaton
+            - Outer Circular Road
+            - PC Culture Housing
+            - Paikpara
+            - Pallabi
+            - Panthapath
+            - Park Road
+            - Pearabagh Road
+            - Pearl Street
+            - Peer Saheber Goli
+            - Pirerbag
+            - Police Fari road
+            - Poribagh Road Number 2
+            - Postagola
+            - Pragati Soroni
+            - Primary school Road
+            - Purana Paltan
+            - Rajabazar
+            - Rajarbag
+            - Rajarbagh
+            - Rajia Sultana Road
+            - Ranavola Road
+            - Rayer Bazaar
+            - Road No 1
+            - Road No 10
+            - Road No 10A
+            - Road No 10B
+            - Road No 11
+            - Road No 11A
+            - Road No 12
+            - Road No 12A
+            - Road No 13
+            - Road No 14
+            - Road No 14A
+            - Road No 15
+            - Road No 16
+            - Road No 18
+            - Road No 19
+            - Road No 2
+            - Road No 21
+            - Road No 23
+            - Road No 28
+            - Road No 2A
+            - Road No 3
+            - Road No 3A
+            - Road No 4
+            - Road No 4A
+            - Road No 5
+            - Road No 6
+            - Road No 6A
+            - Road No 7
+            - Road No 7A
+            - Road No 8
+            - Road No 8A
+            - Road No 9
+            - Road No 9A
+            - Rupnagar R/A
+            - Saat Rawza
+            - Sadek Khan Road
+            - Salimuddin Market Road
+            - Salimullah Road
+            - Sarulia
+            - Sat Masjid Housing
+            - School Road
+            - Science Museum To Water Tank Road
+            - Section 1
+            - Section 10
+            - Section 11
+            - Section 12
+            - Section 13
+            - Section 15
+            - Section 2
+            - Section 6
+            - Section 7
+            - Sector 1
+            - Sector 10
+            - Sector 11
+            - Sector 12
+            - Sector 13
+            - Sector 14
+            - Sector 15
+            - Sector 17
+            - Sector 18
+            - Sector 3
+            - Sector 4
+            - Sector 5
+            - Sector 6
+            - Sector 7
+            - Sector 9
+            - Shah Kabir Mazar Road
+            - Shahbagh Road
+            - Shaheed Tajuddin Ahmed Ave
+            - Shahid Latif Road
+            - Shahid Nagar
+            - Shahid Syed Nazrul Islam Sharani
+            - Shahjadpur
+            - Shahjahan Road
+            - Shamibag
+            - Shantibag
+            - Shantibag - Shahidbag Road
+            - Shantinagar Bazar Rd
+            - Shantinagar Road
+            - Shegunbagicha Road
+            - Sheikhdi
+            - Shekhertek
+            - Sher Shah Suri Road
+            - Sher-E-Bangla Road
+            - Shiddeswari Road
+            - Shiddheswari Lane
+            - Shonir Akhra
+            - Shukrabad
+            - Shyamoli Housing (2nd Project)
+            - Sir Sayed Road
+            - Sobhanbag
+            - Sohrawardy Avenue
+            - Sonatongor Masjid Road
+            - South Azampur
+            - South Badda
+            - South Banasree Project
+            - South Bashabo
+            - South Chalabon
+            - South Jatra Bari
+            - South Kafrul Road
+            - South Keraniganj
+            - South Mollartek
+            - South Monipur
+            - South Mugdapara
+            - Srjani road
+            - Sultangong Road
+            - Tajmahal Road
+            - Tali office Road
+            - Tallabag
+            - Taltola
+            - Taltola goli
+            - Tejgaon Industrial Area
+            - Tejkunipara
+            - Tikatuli
+            - Tikka Para Road
+            - Tilpapara
+            - Titas Gas Road
+            - Topkhana Road
+            - Ullan
+            - Uttar Badda
+            - Vashantek
+            - Vatara
+            - Ward 98
+            - Wari
+            - Wasa Road
+            - West Agargaon
+            - West Dhanmondi
+            - West Dhanmondi and Shangkar
+            - West Dolairpar
+            - West End Street
+            - West Kafrul
+            - West Kazipara
+            - West Malibag
+            - West Mollartek
+            - West Monipur
+            - West Nakhalpara
+            - West Rampura
+            - West Shewrapara
+            - Zafrabad
+            - Zindabahar 2nd Lane
+            - aziz Moholla
+            - rayer bazar-sanker road
+            y:
+            - 1
+            - 0
+            - 3
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 0
+            - 1
+            - 4
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 20
+            - 1
+            - 2
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 3
+            - 1
+            - 1
+            - 6
+            - 1
+            - 1
+            - 2
+            - 7
+            - 0
+            - 2
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 4
+            - 12
+            - 11
+            - 14
+            - 2
+            - 13
+            - 5
+            - 12
+            - 15
+            - 1
+            - 11
+            - 12
+            - 0
+            - 8
+            - 2
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 14
+            - 0
+            - 2
+            - 1
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 3
+            - 1
+            - 2
+            - 17
+            - 1
+            - 7
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 3
+            - 9
+            - 2
+            - 3
+            - 11
+            - 2
+            - 0
+            - 3
+            - 1
+            - 3
+            - 0
+            - 4
+            - 1
+            - 1
+            - 1
+            - 2
+            - 13
+            - 1
+            - 0
+            - 1
+            - 3
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 6
+            - 3
+            - 1
+            - 1
+            - 1
+            - 5
+            - 9
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 2
+            - 1
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 10
+            - 2
+            - 0
+            - 1
+            - 0
+            - 0
+            - 0
+            - 2
+            - 0
+            - 1
+            - 0
+            - 16
+            - 0
+            - 0
+            - 1
+            - 0
+            - 0
+            - 7
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 3
+            - 0
+            - 2
+            - 0
+            - 1
+            - 0
+            - 1
+            - 1
+            - 1
+            - 2
+            - 0
+            - 2
+            - 0
+            - 2
+            - 1
+            - 0
+            - 6
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 5
+            - 1
+            - 2
+            - 0
+            - 4
+            - 2
+            - 2
+            - 5
+            - 1
+            - 0
+            - 9
+            - 2
+            - 3
+            - 5
+            - 3
+            - 3
+            - 0
+            - 0
+            - 1
+            - 1
+            - 5
+            - 1
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 3
+            - 2
+            - 4
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 6
+            - 1
+            - 0
+            - 0
+            - 0
+            - 3
+            - 0
+            - 3
+            - 0
+            - 1
+            - 6
+            - 1
+            - 0
+            - 5
+            - 3
+            - 4
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 3
+            - 4
+            - 1
+            - 0
+            - 5
+            - 8
+            - 4
+            - 13
+            - 0
+            - 0
+            - 0
+            - 1
+            - 1
+            - 9
+            - 0
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 0
+            - 1
+            - 0
+            - 9
+            - 5
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 3
+            - 1
+            - 1
+            - 0
+            - 0
+            - 1
+            - 2
+            - 2
+            - 0
+            - 5
+            - 0
+            - 0
+            - 0
+            - 1
+            - 2
+            - 0
+            - 1
+            - 2
+            - 3
+            - 0
+            - 0
+            - 1
+            - 1
+            - 1
+            - 0
+            - 1
+            - 2
+            - 0
+            - 0
+            - 1
+            - 0
+            - 1
+            - 0
+            - 1
+            - 2
+            - 0
+            - 7
+            - 14
+            - 1
+            - 14
+            - 2
+            - 1
+            - 10
+            - 1
+            - 0
+            - 1
+            - 16
+            - 4
+            - 8
+            - 6
+            - 4
+            - 0
+            - 1
+            - 0
+            - 0
+            - 2
+            - 3
+            - 1
+            - 4
+            - 1
+            - 1
+            - 0
+            - 1
+            - 1
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 1
+            - 3
+            - 1
+            - 17
+            - 0
+            - 2
+            - 0
+            - 2
+            - 1
+            - 1
+            - 0
+            - 0
+            - 9
+            - 1
+            - 0
+            - 10
+            - 3
+            - 0
+            - 1
+            - 1
+            - 5
+            - 4
+            - 1
+            - 0
+            - 0
+            - 1
+            - 1
+            - 2
+            - 1
+            - 2
+            - 1
+            - 0
+            - 4
+            - 3
+            - 1
+            - 0
+            - 0
+            - 0
+            - 1
+            - 21
+            - 2
+            - 1
+            - 1
+            - 2
+            - 0
+            - 5
+            - 2
+            - 10
+            - 6
+            - 0
+            - 1
+            - 2
+            - 0
+            - 2
+            - 0
+            - 0
+            - 6
+            - 26
+            - 0
+            - 0
+            - 0
+            - 0
+        drift_detected: true
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          WSpoiro70j8=
+        reference:
+          small_distribution:
+            x:
+            - ' Road No 14/3'
+            - 1st Colony
+            - 2nd Colony
+            - 3rd Colony
+            - Aainusbag
+            - Abdul Aziz Lane
+            - Abur Tek Road
+            - Adarsha Nagar
+            - Advanced Police Town
+            - Aga Sadek Road
+            - Agamasi Lane
+            - Ahmed Nagar
+            - Allabdirtec Road 1
+            - Alu Bazar
+            - Amligola
+            - Amtola Masjid Goli Road
+            - Arambagh
+            - Asad Avenue
+            - Ashi Dag Road
+            - Ashkona
+            - Ashulia
+            - Ati Bazar
+            - Atosh Khana Lane
+            - Aurangzeb Road
+            - Azam Road
+            - Azimpur
+            - Azimpur Road
+            - Babar Road
+            - Bagan Bari Road
+            - Bagicha Mashjid Road
+            - Baitul Aman Housing Society
+            - Bakshi Bazar
+            - Banasree Main Road
+            - Bangshal Road
+            - Bank Colony
+            - Bank Town
+            - Bash Bari Road
+            - Bashabo Madartek Road
+            - Bashir Uddin Road
+            - Bashundhara Road
+            - Bata Goli
+            - Bawnia
+            - Becharam Dewri
+            - Bepari Goli
+            - Bhagalpur
+            - Bhatuliya
+            - Bibir Bagicha
+            - Block A
+            - Block B
+            - Block C
+            - Block C Extension
+            - Block D
+            - Block E
+            - Block F
+            - Block G
+            - Block H
+            - Block I
+            - Block J
+            - Block K
+            - Bochila
+            - Boro Maghbazar
+            - Bosila
+            - Bot Tola
+            - Central Road
+            - Chad Uddan Housing
+            - Chairman Para
+            - Chamilibag
+            - Chandrima Model Town
+            - Chawk Bazar
+            - Chowdhuripara
+            - Circular Road
+            - Comfort Housing
+            - Comilla Para
+            - Crescent Road
+            - D.I.T. Project
+            - DIT Road
+            - Dagormora
+            - Dakhshin Para
+            - Dakkhin Paikpara
+            - Darussalam
+            - Dhaka Housing Main Road
+            - Dhaka Uddan
+            - Dhalpur
+            - Dholpur New Road
+            - Dhour Mouza
+            - Dilkhushabag
+            - Doctor Goli
+            - Dolphin Goli Road
+            - Donia
+            - Doniya
+            - Dutabash Road
+            - East Azampur
+            - East Bashabo
+            - East Kazipara
+            - East Maniknagar
+            - East Monipur
+            - East Nakhalpara
+            - East Rampura
+            - East Rampura Road
+            - East Shewrapara
+            - Elephant Road
+            - Enayet Ganj
+            - Fakirapool
+            - Farmgate
+            - Faydabad
+            - Free School Street
+            - Gajanabi Road
+            - Ganaktuli Road
+            - Gandaria
+            - Gawair
+            - Girls School Road
+            - Goaltek
+            - Gobindapur
+            - Golapbag
+            - Golden Street
+            - Gopibag
+            - Goran
+            - Green City Housing
+            - Green Road
+            - Greenway Road
+            - Gulbag
+            - Gulshan 1
+            - Gulshan 2
+            - Haji Abdullah Sarkar Lane
+            - Haji Goli
+            - Haji Rahim Box Lane
+            - Hazi Abdur Rashid Lane
+            - Hossain Saheb Goli
+            - Humayun Road
+            - Ibrahimpur Bazar Road
+            - Idgaha road
+            - Imandipur
+            - Indira Road
+            - Islambag
+            - Ismail Lane
+            - Jagannathpur
+            - Jamoj Road
+            - Janata Housing Society
+            - Japan Garden City
+            - Jhigatola Road
+            - Jigatola
+            - Julon Bari
+            - Jurain
+            - Kadamtala
+            - Kadamtali
+            - Kahektuli
+            - Kajla
+            - Kalabagan 1st Lane
+            - Kalabagan 2nd Lane
+            - Kalachandpur Main Road
+            - Kalachandpur School Road
+            - Kallyanpur
+            - Kamal Khan Road
+            - Kamal Soroni Road
+            - Kamarpara
+            - Kamlapur
+            - Karatitola
+            - Karwan Bazar
+            - Katashur
+            - Katherpul
+            - Kazi Motahar Hossain Road
+            - Kazi Riaz Uddin Road
+            - Khaje Dewan
+            - Khajedal Sing Lane
+            - Khan Bari Road
+            - Khanka E Razviya Road/Zia Soroni
+            - Khilbari Tek
+            - Khilji Road
+            - Khondokar Goli Road
+            - Kolta Bazar
+            - Konapara
+            - Kosai Bari
+            - Krishi Bank Road
+            - Kutubkhali
+            - Kutum Goli
+            - Lake Circus Road
+            - Lake City Concord
+            - Lalbagh Road
+            - Lane No 5
+            - Lichu Bagan Road
+            - Luxmibazar
+            - Madarbari
+            - Madartek
+            - Madhya Ajampur
+            - Mahuthtuli
+            - Majed Sardar Road
+            - Majidpur
+            - Malibag Bazar Rd
+            - Malibag College Road
+            - Malibagh Chowdhury Para
+            - Malibagh First Lane
+            - Manda
+            - Manda Road
+            - Manikdi
+            - Manikdi Road
+            - Mansurabad Housing Society
+            - Mastertek
+            - Matikata
+            - Matikata Road
+            - Matuail
+            - Meradia
+            - Merul Badda
+            - Mia Para
+            - Middle Badda
+            - Middle Bashabo
+            - Middle Monipur
+            - Middle Paikpara
+            - Mirbag Notun Rasta
+            - Mirpur DOHS
+            - Mirpur Road
+            - Mitford Road
+            - Moghbazar Kazi Office Lane
+            - Mohammadi Homes R/A
+            - Mohammadi Housing LTD.
+            - Mohammadia Housing Society
+            - Mohonpur Road
+            - Momin Road
+            - Moneshwar
+            - Monipur
+            - Monipuri School Road
+            - Monipuripara
+            - Motijheel Extension
+            - Moushair
+            - Mridha Bari
+            - Muktijoddha Road
+            - Muslim Modern College Road
+            - Mymensingh Road
+            - Namapara
+            - Narinda
+            - Nawabgonj
+            - Nawabpur Road
+            - Naya Bazar
+            - Naya Paltan
+            - Nayatola
+            - New Airport Road
+            - New Baily Road
+            - New Elephant Road
+            - New Eskaton
+            - New Eskaton Road
+            - Nikunja 2
+            - Noa Nagar
+            - Nobodoy Housing Society
+            - North Adabor
+            - North Azampur
+            - North Bashabo
+            - North Dhanmondi Road
+            - North Goran
+            - North Ibrahimpur
+            - North Jatra Bari
+            - North Kafrul Road
+            - North Maniknagar
+            - North Mugdapara
+            - North Road
+            - North Shahjahanpur
+            - Nurer Chala
+            - Nurjahan Road
+            - Old Eskaton
+            - Outer Circular Road
+            - PC Culture Housing
+            - Paikpara
+            - Pallabi
+            - Panthapath
+            - Park Road
+            - Pearabagh Road
+            - Pearl Street
+            - Peer Saheber Goli
+            - Pirerbag
+            - Police Fari road
+            - Poribagh Road Number 2
+            - Postagola
+            - Pragati Soroni
+            - Primary school Road
+            - Purana Paltan
+            - Rajabazar
+            - Rajarbag
+            - Rajarbagh
+            - Rajia Sultana Road
+            - Ranavola Road
+            - Rayer Bazaar
+            - Road No 1
+            - Road No 10
+            - Road No 10A
+            - Road No 10B
+            - Road No 11
+            - Road No 11A
+            - Road No 12
+            - Road No 12A
+            - Road No 13
+            - Road No 14
+            - Road No 14A
+            - Road No 15
+            - Road No 16
+            - Road No 18
+            - Road No 19
+            - Road No 2
+            - Road No 21
+            - Road No 23
+            - Road No 28
+            - Road No 2A
+            - Road No 3
+            - Road No 3A
+            - Road No 4
+            - Road No 4A
+            - Road No 5
+            - Road No 6
+            - Road No 6A
+            - Road No 7
+            - Road No 7A
+            - Road No 8
+            - Road No 8A
+            - Road No 9
+            - Road No 9A
+            - Rupnagar R/A
+            - Saat Rawza
+            - Sadek Khan Road
+            - Salimuddin Market Road
+            - Salimullah Road
+            - Sarulia
+            - Sat Masjid Housing
+            - School Road
+            - Science Museum To Water Tank Road
+            - Section 1
+            - Section 10
+            - Section 11
+            - Section 12
+            - Section 13
+            - Section 15
+            - Section 2
+            - Section 6
+            - Section 7
+            - Sector 1
+            - Sector 10
+            - Sector 11
+            - Sector 12
+            - Sector 13
+            - Sector 14
+            - Sector 15
+            - Sector 17
+            - Sector 18
+            - Sector 3
+            - Sector 4
+            - Sector 5
+            - Sector 6
+            - Sector 7
+            - Sector 9
+            - Shah Kabir Mazar Road
+            - Shahbagh Road
+            - Shaheed Tajuddin Ahmed Ave
+            - Shahid Latif Road
+            - Shahid Nagar
+            - Shahid Syed Nazrul Islam Sharani
+            - Shahjadpur
+            - Shahjahan Road
+            - Shamibag
+            - Shantibag
+            - Shantibag - Shahidbag Road
+            - Shantinagar Bazar Rd
+            - Shantinagar Road
+            - Shegunbagicha Road
+            - Sheikhdi
+            - Shekhertek
+            - Sher Shah Suri Road
+            - Sher-E-Bangla Road
+            - Shiddeswari Road
+            - Shiddheswari Lane
+            - Shonir Akhra
+            - Shukrabad
+            - Shyamoli Housing (2nd Project)
+            - Sir Sayed Road
+            - Sobhanbag
+            - Sohrawardy Avenue
+            - Sonatongor Masjid Road
+            - South Azampur
+            - South Badda
+            - South Banasree Project
+            - South Bashabo
+            - South Chalabon
+            - South Jatra Bari
+            - South Kafrul Road
+            - South Keraniganj
+            - South Mollartek
+            - South Monipur
+            - South Mugdapara
+            - Srjani road
+            - Sultangong Road
+            - Tajmahal Road
+            - Tali office Road
+            - Tallabag
+            - Taltola
+            - Taltola goli
+            - Tejgaon Industrial Area
+            - Tejkunipara
+            - Tikatuli
+            - Tikka Para Road
+            - Tilpapara
+            - Titas Gas Road
+            - Topkhana Road
+            - Ullan
+            - Uttar Badda
+            - Vashantek
+            - Vatara
+            - Ward 98
+            - Wari
+            - Wasa Road
+            - West Agargaon
+            - West Dhanmondi
+            - West Dhanmondi and Shangkar
+            - West Dolairpar
+            - West End Street
+            - West Kafrul
+            - West Kazipara
+            - West Malibag
+            - West Mollartek
+            - West Monipur
+            - West Nakhalpara
+            - West Rampura
+            - West Shewrapara
+            - Zafrabad
+            - Zindabahar 2nd Lane
+            - aziz Moholla
+            - rayer bazar-sanker road
+            y:
+            - 0
+            - 1
+            - 2
+            - 0
+            - 1
+            - 1
+            - 2
+            - 9
+            - 0
+            - 1
+            - 3
+            - 18
+            - 1
+            - 2
+            - 3
+            - 1
+            - 4
+            - 7
+            - 4
+            - 67
+            - 3
+            - 7
+            - 1
+            - 0
+            - 3
+            - 2
+            - 1
+            - 9
+            - 3
+            - 3
+            - 35
+            - 2
+            - 0
+            - 11
+            - 19
+            - 5
+            - 10
+            - 15
+            - 1
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 1
+            - 1
+            - 4
+            - 52
+            - 34
+            - 83
+            - 13
+            - 61
+            - 40
+            - 55
+            - 52
+            - 13
+            - 37
+            - 33
+            - 2
+            - 43
+            - 13
+            - 3
+            - 1
+            - 5
+            - 2
+            - 1
+            - 6
+            - 79
+            - 1
+            - 12
+            - 0
+            - 8
+            - 2
+            - 4
+            - 3
+            - 4
+            - 10
+            - 6
+            - 1
+            - 53
+            - 6
+            - 15
+            - 8
+            - 4
+            - 2
+            - 3
+            - 2
+            - 1
+            - 14
+            - 52
+            - 0
+            - 1
+            - 34
+            - 12
+            - 1
+            - 17
+            - 0
+            - 20
+            - 1
+            - 10
+            - 2
+            - 1
+            - 2
+            - 4
+            - 42
+            - 8
+            - 5
+            - 2
+            - 7
+            - 4
+            - 5
+            - 2
+            - 2
+            - 3
+            - 5
+            - 5
+            - 20
+            - 6
+            - 8
+            - 2
+            - 5
+            - 27
+            - 21
+            - 1
+            - 1
+            - 1
+            - 2
+            - 2
+            - 1
+            - 1
+            - 1
+            - 1
+            - 4
+            - 0
+            - 1
+            - 5
+            - 2
+            - 5
+            - 1
+            - 5
+            - 32
+            - 4
+            - 1
+            - 15
+            - 5
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 1
+            - 49
+            - 2
+            - 2
+            - 0
+            - 3
+            - 1
+            - 15
+            - 9
+            - 5
+            - 1
+            - 1
+            - 2
+            - 1
+            - 6
+            - 1
+            - 6
+            - 1
+            - 0
+            - 3
+            - 7
+            - 2
+            - 4
+            - 1
+            - 10
+            - 4
+            - 1
+            - 5
+            - 1
+            - 3
+            - 0
+            - 1
+            - 11
+            - 5
+            - 2
+            - 2
+            - 0
+            - 7
+            - 4
+            - 3
+            - 5
+            - 8
+            - 9
+            - 25
+            - 1
+            - 12
+            - 4
+            - 20
+            - 3
+            - 14
+            - 8
+            - 5
+            - 1
+            - 25
+            - 8
+            - 26
+            - 40
+            - 1
+            - 13
+            - 2
+            - 1
+            - 1
+            - 7
+            - 19
+            - 0
+            - 1
+            - 1
+            - 4
+            - 1
+            - 1
+            - 6
+            - 2
+            - 0
+            - 1
+            - 1
+            - 5
+            - 1
+            - 1
+            - 3
+            - 1
+            - 1
+            - 6
+            - 2
+            - 9
+            - 1
+            - 3
+            - 5
+            - 3
+            - 14
+            - 2
+            - 1
+            - 42
+            - 6
+            - 11
+            - 7
+            - 3
+            - 1
+            - 5
+            - 2
+            - 4
+            - 0
+            - 2
+            - 1
+            - 17
+            - 8
+            - 6
+            - 1
+            - 8
+            - 22
+            - 10
+            - 53
+            - 1
+            - 1
+            - 1
+            - 2
+            - 4
+            - 41
+            - 1
+            - 4
+            - 1
+            - 1
+            - 0
+            - 6
+            - 2
+            - 8
+            - 6
+            - 2
+            - 1
+            - 42
+            - 9
+            - 1
+            - 3
+            - 1
+            - 1
+            - 3
+            - 10
+            - 2
+            - 3
+            - 1
+            - 1
+            - 1
+            - 3
+            - 9
+            - 1
+            - 16
+            - 1
+            - 2
+            - 1
+            - 1
+            - 6
+            - 2
+            - 14
+            - 2
+            - 9
+            - 4
+            - 1
+            - 7
+            - 3
+            - 0
+            - 8
+            - 2
+            - 4
+            - 4
+            - 3
+            - 4
+            - 3
+            - 3
+            - 1
+            - 1
+            - 3
+            - 2
+            - 28
+            - 50
+            - 19
+            - 44
+            - 2
+            - 15
+            - 24
+            - 14
+            - 8
+            - 3
+            - 80
+            - 24
+            - 39
+            - 16
+            - 6
+            - 1
+            - 4
+            - 7
+            - 11
+            - 18
+            - 22
+            - 9
+            - 20
+            - 7
+            - 3
+            - 1
+            - 1
+            - 2
+            - 2
+            - 1
+            - 11
+            - 3
+            - 2
+            - 8
+            - 2
+            - 1
+            - 1
+            - 1
+            - 1
+            - 16
+            - 2
+            - 39
+            - 3
+            - 4
+            - 1
+            - 7
+            - 7
+            - 0
+            - 5
+            - 2
+            - 9
+            - 1
+            - 13
+            - 29
+            - 6
+            - 1
+            - 2
+            - 1
+            - 21
+            - 3
+            - 6
+            - 1
+            - 2
+            - 3
+            - 3
+            - 7
+            - 0
+            - 11
+            - 0
+            - 2
+            - 5
+            - 6
+            - 3
+            - 4
+            - 2
+            - 4
+            - 0
+            - 87
+            - 6
+            - 7
+            - 1
+            - 7
+            - 4
+            - 20
+            - 5
+            - 69
+            - 11
+            - 2
+            - 0
+            - 6
+            - 4
+            - 2
+            - 7
+            - 5
+            - 24
+            - 85
+            - 1
+            - 1
+            - 2
+            - 1
+        stattest_name: Jensen-Shannon distance
+        stattest_threshold: 0.1
+      Type:
+        column_name: Type
+        column_type: cat
+        current:
+          small_distribution:
+            x:
+            - Apartment
+            - Building
+            - Duplex
+            - Plot
+            y:
+            - 896
+            - 4
+            - 0
+            - 0
+        drift_detected: false
+        drift_score: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          sZyGRjVuoT8=
+        reference:
+          small_distribution:
+            x:
+            - Apartment
+            - Building
+            - Duplex
+            - Plot
+            y:
+            - 3571
+            - 17
+            - 11
+            - 1
+        stattest_name: Jensen-Shannon distance
+        stattest_threshold: 0.1
+    number_of_columns: 10
+    number_of_drifted_columns: 3
+    share_of_drifted_columns: 0.3

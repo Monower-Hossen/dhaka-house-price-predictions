@@ -1,34 +1,27 @@
-COLUMNS:
-  price: int64
-  area: int64
-  bedrooms: int64
-  bathrooms: int64
-  stories: int64
-  mainroad: object
-  guestroom: object
-  basement: object
-  hotwaterheating: object
-  airconditioning: object
-  parking: int64
-  prefarea: object
-  furnishingstatus: object
+columns:
+  Location: string
+  Price: float
+  Type: string
+  No_Beds: int
+  No_Baths: int
+  Area: float
+  Latitude: float
+  Longitude: float
+  Region: string
+  Sub_region: string
 
-TARGET_COLUMN:
-  name: price
+target_column: Price
 
 # Used by Data Transformation to apply specific scaling/encoding
 NUMERICAL_COLUMNS:
-  - area
-  - bedrooms
-  - bathrooms
-  - stories
-  - parking
+  - No_Beds
+  - No_Baths
+  - Area
+  - Latitude
+  - Longitude
 
 CATEGORICAL_COLUMNS:
-  - mainroad
-  - guestroom
-  - basement
-  - hotwaterheating
-  - airconditioning
-  - prefarea
-  - furnishingstatus
+  - Location
+  - Type
+  - Region
+  - Sub_region
