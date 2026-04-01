@@ -3,108 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Price Predictor</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Dhaka House Price Prediction</title>
     <style>
-        body { background-color: #f8f9fa; }
-        .card { border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin: auto; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #5cb85c; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #4cae4c; }
+        h2 { text-align: center; color: #333; }
+        .result { text-align: center; margin-top: 20px; font-size: 20px; color: #d9534f; }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card p-4">
-                    <h2 class="text-center mb-4">House Price Prediction</h2>
-                    
-                    <form action="{{ url_for('predict_datapoint')}}" method="post">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Total Area (sq ft)</label>
-                                <input class="form-control" type="number" name="area" placeholder="e.g. 5000" required />
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Bedrooms</label>
-                                <input class="form-control" type="number" name="bedrooms" placeholder="e.g. 3" required />
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Bathrooms</label>
-                                <input class="form-control" type="number" name="bathrooms" placeholder="e.g. 2" required />
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Stories</label>
-                                <input class="form-control" type="number" name="stories" placeholder="e.g. 2" required />
-                            </div>
+    <div class="container">
+        <h2>Dhaka House Price Predictor</h2>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Location" placeholder="Full Location (e.g., Sector 10, Uttara, Dhaka)" required>
+            
+            <select name="Type" required>
+                <option value="" disabled selected>Select Property Type</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Building">Building</option>
+                <option value="Duplex">Duplex</option>
+                <option value="Plot">Plot</option>
+            </select>
 
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Main Road Access</label>
-                                <select class="form-select" name="mainroad">
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Furnishing Status</label>
-                                <select class="form-select" name="furnishingstatus">
-                                    <option value="furnished">Furnished</option>
-                                    <option value="semi-furnished">Semi-Furnished</option>
-                                    <option value="unfurnished">Unfurnished</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Guestroom</label>
-                                <select class="form-select" name="guestroom">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Basement</label>
-                                <select class="form-select" name="basement">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Hot Water Heating</label>
-                                <select class="form-select" name="hotwaterheating">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Air Conditioning</label>
-                                <select class="form-select" name="airconditioning">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Parking Spaces</label>
-                                <input class="form-control" type="number" name="parking" placeholder="e.g. 1" required />
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Preferred Area</label>
-                                <select class="form-select" name="prefarea">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
-                                </select>
-                            </div>
-                        </div>
+            <input type="number" name="No_Beds" placeholder="Number of Bedrooms" required>
+            <input type="number" name="No_Baths" placeholder="Number of Bathrooms" required>
+            <input type="number" step="any" name="Area" placeholder="Area in sqft" required>
+            <input type="number" step="any" name="Latitude" placeholder="Latitude" required>
+            <input type="number" step="any" name="Longitude" placeholder="Longitude" required>
+            
+            <select name="Region" required>
+                <option value="" disabled selected>Select Region</option>
+                <option value="Uttara">Uttara</option>
+                <option value="Mirpur">Mirpur</option>
+                <option value="Banani">Banani</option>
+                <option value="Gulshan">Gulshan</option>
+                <option value="Dhanmondi">Dhanmondi</option>
+                <option value="Badda">Badda</option>
+                <option value="BashundharaR-A">Bashundhara R-A</option>
+                <option value="Mohammadpur">Mohammadpur</option>
+                <option value="Khilgaon">Khilgaon</option>
+                <option value="Maghbazar">Maghbazar</option>
+                <option value="Rampura">Rampura</option>
+                <option value="Hazaribag">Hazaribag</option>
+                <option value="Tejgaon">Tejgaon</option>
+            </select>
 
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Predict Price</button>
-                        </div>
-                    </form>
+            <select name="Sub_region" required>
+                <option value="" disabled selected>Select Sub-region</option>
+                <option value="Sector 10">Sector 10</option>
+                <option value="Sector 13">Sector 13</option>
+                <option value="Sector 4">Sector 4</option>
+                <option value="Sector 7">Sector 7</option>
+                <option value="Section 1">Section 1</option>
+                <option value="Section 10">Section 10</option>
+                <option value="Section 11">Section 11</option>
+                <option value="Section 12">Section 12</option>
+                <option value="Block A">Block A</option>
+                <option value="Block B">Block B</option>
+                <option value="Block C">Block C</option>
+                <option value="Block D">Block D</option>
+                <option value="Block F">Block F</option>
+                <option value="Block G">Block G</option>
+                <option value="Block H">Block H</option>
+                <option value="Block I">Block I</option>
+                <option value="Pallabi">Pallabi</option>
+                <option value="Mirpur DOHS">Mirpur DOHS</option>
+                <option value="Jigatola">Jigatola</option>
+                <option value="Bochila">Bochila</option>
+                <option value="Kallyanpur">Kallyanpur</option>
+                <option value="Darussalam">Darussalam</option>
+            </select>
+            
+            <button type="submit">Predict Price</button>
+        </form>
 
-                    {% if results %}
-                    <div class="alert alert-success mt-4 text-center">
-                        <h4>Predicted House Price: ${{ results|round(2) }}</h4>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
+        {% if results %}
+        <div class="result">
+            <strong>Predicted Price: BDT {{results}}</strong>
         </div>
+        {% endif %}
     </div>
 </body>
 </html>
